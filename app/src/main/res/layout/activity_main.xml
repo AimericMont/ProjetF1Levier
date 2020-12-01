@@ -30,7 +30,7 @@
         android:id="@+id/Team_but"
         android:layout_width="181dp"
         android:layout_height="172dp"
-        android:layout_marginBottom="256dp"
+        android:layout_marginBottom="456dp"
         android:text="TEAM"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,6 +44,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.403"
         app:srcCompat="@drawable/article" />
 
     <Button
