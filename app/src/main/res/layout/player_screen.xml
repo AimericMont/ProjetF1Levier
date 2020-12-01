@@ -79,9 +79,11 @@
         android:id="@+id/ajouter_but_id"
         android:layout_width="157dp"
         android:layout_height="133dp"
+        android:layout_marginBottom="4dp"
         android:text="AJOUTER"
         app:layout_constraintBottom_toBottomOf="@+id/spinner"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName2" />
 
     <Spinner
