@@ -15,10 +15,11 @@ public class RunActivity extends AppCompatActivity {
         setContentView(R.layout.run_screen);
     }
 
+    private static int i=1;
     public void onClick(View v) {
         ImageView I = findViewById(R.id.num_player_team1);
         int[] Image={R.drawable.pict1,R.drawable.pict2,R.drawable.pict3};
-        I.setImageResource(Image[1]);
+        I.setImageResource(Image[i++]);
     }
 }
 
