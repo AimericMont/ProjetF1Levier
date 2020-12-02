@@ -1,12 +1,16 @@
 package com.example.projetf1levier;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.SystemClock;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Chronometer;
 
@@ -14,10 +18,65 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class RunActivity extends AppCompatActivity {
 
+
+    Button btnStart, btnLap;
+    TextView txtTimer;
+    Handler customeHandler = new Handler();
+    LinearLayout container;
+
+    long startTime=0L,timeInMilliSeconds=0L,timeSwapBuff=0L,updateTime=0L;
+
+    Runnable updateTimerThread = new Runnable() {
+        @Override
+        public void run() {
+            timeInMilliSeconds = SystemClock.uptimeMillis()-startTime;
+            updateTime=timeSwapBuff+timeInMilliSeconds;
+            int secs=(int)(updateTime/1000);
+            int mins=secs/60;
+            secs%=60;
+            int milliseconds=(int)(updateTime%1000);
+            txtTimer.setText(""+mins+":"+String.format("%02d",secs)+":"+String.format("%3d",milliseconds));
+            customeHandler.postDelayed(this,0);
+        }
+    };
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.run_screen);
+
+        btnStart=(Button)findViewById(R.id.start_but);
+        btnLap=(Button)findViewById(R.id.results_but);
+        txtTimer=(TextView)findViewById(R.id.timerValue);
+        container = (LinearLayout)findViewById(R.id.container);
+
+        btnStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startTime=SystemClock.uptimeMillis();
+                customeHandler.postDelayed(updateTimerThread,0);
+            }
+        });
+
+        btnLap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LayoutInflater inflater=(LayoutInflater)getBaseContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                View addView =inflater.inflate(R.layout.row,null);
+                TextView txtValue = (TextView)addView.findViewById(R.id.txtContent);
+                txtValue.setText(txtTimer.getText());
+                container.addView(addView);
+            }
+        });
     }
+
+
+
+
+
+
+
+
+
 
     int stepcont=1;
     int playercont=0;
