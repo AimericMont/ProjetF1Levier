@@ -13,6 +13,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:background="#8BC34A"
+        android:onClick="onClick"
         android:text="NEXT STEP"
         app:layout_constraintBottom_toBottomOf="@+id/but_team1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +27,7 @@
         app:layout_constraintEnd_toStartOf="@+id/but_team6"
         app:layout_constraintStart_toEndOf="@+id/num_player_team6"
         app:layout_constraintTop_toTopOf="@+id/but_team5"
-        app:srcCompat="@drawable/sprint" />
+        app:srcCompat="@drawable/sprint1" />
 
     <ImageView
         android:id="@+id/step_team10"
@@ -36,7 +37,7 @@
         app:layout_constraintEnd_toStartOf="@+id/but_team10"
         app:layout_constraintStart_toEndOf="@+id/num_player_team10"
         app:layout_constraintTop_toTopOf="@+id/but_team9"
-        app:srcCompat="@drawable/sprint" />
+        app:srcCompat="@drawable/sprint1" />
 
     <Button
         android:id="@+id/but_team8"
@@ -67,6 +68,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:background="#FFEB3B"
+        android:onClick="onClick"
         android:text="NEXT STEP"
         app:layout_constraintBottom_toBottomOf="@+id/step_team4"
         app:layout_constraintEnd_toEndOf="parent"
@@ -120,7 +122,7 @@
         app:layout_constraintEnd_toStartOf="@+id/but_team8"
         app:layout_constraintStart_toEndOf="@+id/num_player_team8"
         app:layout_constraintTop_toTopOf="@+id/num_player_team8"
-        app:srcCompat="@drawable/sprint" />
+        app:srcCompat="@drawable/sprint1" />
 
     <Button
         android:id="@+id/but_team10"
@@ -166,7 +168,7 @@
         app:layout_constraintEnd_toStartOf="@+id/but_team2"
         app:layout_constraintStart_toEndOf="@+id/num_player_team2"
         app:layout_constraintTop_toTopOf="@+id/but_team1"
-        app:srcCompat="@drawable/sprint" />
+        app:srcCompat="@drawable/sprint1" />
 
     <TextView
         android:id="@+id/title_team6"
@@ -196,7 +198,7 @@
         app:layout_constraintEnd_toStartOf="@+id/but_team4"
         app:layout_constraintStart_toEndOf="@+id/num_player_team4"
         app:layout_constraintTop_toTopOf="@+id/num_player_team4"
-        app:srcCompat="@drawable/sprint" />
+        app:srcCompat="@drawable/sprint1" />
 
     <TextView
         android:id="@+id/title_team2"
@@ -238,7 +240,7 @@
         app:layout_constraintEnd_toStartOf="@+id/but_team9"
         app:layout_constraintStart_toEndOf="@+id/num_player_team9"
         app:layout_constraintTop_toTopOf="@+id/but_team9"
-        app:srcCompat="@drawable/sprint" />
+        app:srcCompat="@drawable/sprint1" />
 
     <TextView
         android:id="@+id/title_team9"
@@ -281,7 +283,7 @@
         app:layout_constraintEnd_toStartOf="@+id/but_team7"
         app:layout_constraintStart_toEndOf="@+id/num_player_team7"
         app:layout_constraintTop_toTopOf="@+id/but_team7"
-        app:srcCompat="@drawable/sprint" />
+        app:srcCompat="@drawable/sprint1" />
 
     <TextView
         android:id="@+id/title_team7"
@@ -324,7 +326,7 @@
         app:layout_constraintEnd_toStartOf="@+id/but_team5"
         app:layout_constraintStart_toEndOf="@+id/num_player_team5"
         app:layout_constraintTop_toTopOf="@+id/but_team5"
-        app:srcCompat="@drawable/sprint" />
+        app:srcCompat="@drawable/sprint1" />
 
     <TextView
         android:id="@+id/title_team5"
@@ -353,6 +355,7 @@
         android:layout_height="100dp"
         android:layout_marginTop="60dp"
         android:background="#E80653"
+        android:onClick="onClick"
         android:text="NEXT STEP"
         app:layout_constraintEnd_toEndOf="@+id/but_team1"
         app:layout_constraintHorizontal_bias="0.0"
@@ -367,7 +370,7 @@
         app:layout_constraintEnd_toStartOf="@+id/but_team3"
         app:layout_constraintStart_toEndOf="@+id/num_player_team3"
         app:layout_constraintTop_toTopOf="@+id/but_team3"
-        app:srcCompat="@drawable/sprint" />
+        app:srcCompat="@drawable/sprint1" />
 
     <TextView
         android:id="@+id/title_team3"
@@ -411,7 +414,7 @@
         app:layout_constraintEnd_toStartOf="@+id/but_team1"
         app:layout_constraintStart_toEndOf="@+id/num_player_team1"
         app:layout_constraintTop_toTopOf="@+id/but_team1"
-        app:srcCompat="@drawable/sprint" />
+        app:srcCompat="@drawable/sprint1" />
 
     <ImageView
         android:id="@+id/num_player_team1"
