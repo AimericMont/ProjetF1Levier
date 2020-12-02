@@ -1,10 +1,14 @@
 package com.example.projetf1levier;
 
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Chronometer;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Chronometer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -59,6 +63,14 @@ public class RunActivity extends AppCompatActivity {
                     break;
             }
     }
+
+    public void startChrono(View v){
+        Chronometer chronoText;
+        chronoText=findViewById(R.id.chrono_id);
+        chronoText.setBase(SystemClock.elapsedRealtime());
+        chronoText.start();
+    }
+
 }
 
 

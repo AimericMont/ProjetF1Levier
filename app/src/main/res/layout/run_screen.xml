@@ -455,6 +455,7 @@
         android:layout_height="100dp"
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
+        android:onClick="startChrono"
         android:text="START RUN"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -476,17 +477,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.972" />
 
-    <EditText
+    <Chronometer
         android:id="@+id/chrono_id"
         android:layout_width="382dp"
         android:layout_height="199dp"
         android:ems="10"
         android:inputType="time"
+        android:textSize="70sp"
         app:layout_constraintBottom_toBottomOf="@+id/results_but"
-        app:layout_constraintEnd_toStartOf="@+id/start_but"
-        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/start_but"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.015" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
