@@ -17,8 +17,6 @@ import android.widget.Chronometer;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class RunActivity extends AppCompatActivity {
-
-
     Button btnStart, btnLap;
     TextView txtTimer;
     Handler customeHandler = new Handler();
@@ -68,14 +66,6 @@ public class RunActivity extends AppCompatActivity {
             }
         });
     }
-
-
-
-
-
-
-
-
 
 
     int stepcont=1;
