@@ -10,11 +10,11 @@
         android:id="@+id/prenom_id"
         android:layout_width="120dp"
         android:layout_height="50dp"
-        android:text="PRENOM"
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName2"
+        tools:text="PRENOM" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
@@ -23,11 +23,11 @@
         android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        tools:text="Name" />
 
     <TextView
         android:id="@+id/title_id"
@@ -55,11 +55,10 @@
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="220dp"
-        android:layout_height="50"
+        android:layout_height="50dp"
         android:layout_marginTop="70dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.43"
         app:layout_constraintStart_toStartOf="parent"
