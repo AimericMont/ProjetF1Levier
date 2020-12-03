@@ -1,13 +1,10 @@
 package com.example.projetf1levier;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
