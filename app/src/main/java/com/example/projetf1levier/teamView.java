@@ -1,13 +1,10 @@
 package com.example.projetf1levier;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.widget.GridView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.ArrayList;
 
 public class teamView extends AppCompatActivity {
 
@@ -16,10 +13,10 @@ public class teamView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_team_view);
 
-        Intent intent = getIntent();
-
-
-        ArrayList<team> listOfTeam = intent.getParcelableExtra("teamList");
+        //Intent intent = getIntent();
+//
+//
+        //ArrayList<team> listOfTeam = intent.getParcelableExtra("teamList");
 
         String[] prenoms = new String[]{
                 "Antoine", "Benoit", "Cyril", "David", "Eloise", "Florent",
@@ -29,7 +26,8 @@ public class teamView extends AppCompatActivity {
                 "Yann", "Zoé"
         };
 
-        ListView listView = (ListView)findViewById(R.id.playerlistView);
+        GridView listView = (GridView)findViewById(R.id.teamGridView);
+
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, prenoms);
         listView.setAdapter(adapter);

@@ -1,10 +1,12 @@
 package com.example.projetf1levier;
 
+import java.io.Serializable;
+
 /*
 *Class player
 * have name, firstName and level
  */
-public class player implements Comparable {
+public class player implements Comparable , Serializable {
     String m_name;
     String m_firstName;
     int m_level;
@@ -35,6 +37,5 @@ public class player implements Comparable {
         int comparLevel=((player)p).getLevel();
         /* For Ascending order*/
         return this.m_level-comparLevel;
-
     }
 }

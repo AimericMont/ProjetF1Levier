@@ -1,11 +1,12 @@
 package com.example.projetf1levier;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /*
 *team class
 * have list of player
  */
-public class team {
+public class team implements Serializable {
     ArrayList<player> m_playerList;
 
     /*
@@ -13,7 +14,7 @@ public class team {
      */
     public team()
     {
-        m_playerList= new ArrayList<player>();
+        m_playerList= new ArrayList<player>(3);
     }
 
 

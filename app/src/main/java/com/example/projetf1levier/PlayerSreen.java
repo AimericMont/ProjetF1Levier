@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -32,7 +33,7 @@ public class PlayerSreen extends AppCompatActivity {
     }
 
     public void addClick(View view) {
-        // Do something in response to button
+
 
         EditText editText = (EditText) findViewById(R.id.editTextTextPersonName);
         String name = editText.getText().toString();
@@ -40,11 +41,14 @@ public class PlayerSreen extends AppCompatActivity {
         editText = (EditText) findViewById(R.id.editTextTextPersonName2);
         String firstName = editText.getText().toString();
 
+        Spinner spinner = (Spinner) findViewById(R.id.spinner) ;
+        int level =Integer.parseInt(spinner.getSelectedItem().toString());
+
         System.out.print("bonjour");
-        teams.addPlayer(new player(name,firstName,1));
+        teams.addPlayer(name,firstName,level);
 
 
-        listItems.add(teams.getNbPlayer()+" - "+name+" " +firstName  + "");
+        listItems.add(String.format("%d - %s %s   lvl :%d", teams.getNbPlayer(), name, firstName, level));
         adapter.notifyDataSetChanged();
 
         ListView mListView = (ListView)findViewById(R.id.playerlistView);
@@ -56,7 +60,8 @@ public class PlayerSreen extends AppCompatActivity {
 
         Intent intent = new Intent(this, teamView.class);
 
-        intent.putExtra("teamList",teams.getListOfTeam());
+        //intent.putExtra("teamList", teams.getListOfTeam());
+
         startActivity(intent);
 
     }
