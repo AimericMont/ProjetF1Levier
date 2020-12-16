@@ -1,0 +1,77 @@
+package com.example.projetf1levier;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class teamList implements Serializable {
+
+    ArrayList<team> m_listOfTeam;
+    ArrayList<player> m_listOfPlayer;
+    //ArrayList<player> m_listOfPlayer;
+
+
+    public teamList(PlayerSreen screen)
+    {
+        m_listOfTeam= new ArrayList<team>();
+        m_listOfPlayer= new ArrayList<player> (30);
+
+    }
+
+    public void addPlayer(player _p)
+    {
+
+
+        m_listOfPlayer.add(_p);
+    }
+
+    public void addPlayer(String _name, String _firstName, int _level)
+    {
+        addPlayer(new player(_name,_firstName,_level));
+    }
+
+    public int getNbPlayer()
+    {
+        return m_listOfPlayer.size();
+    }
+
+
+    public void makeTeam()
+    {
+        int nbPlayer=getNbPlayer();
+        int nbTeam= (nbPlayer%3 == 0) ? nbPlayer/3 : nbPlayer/3 +1;
+
+        Collections.sort(m_listOfPlayer);
+
+        for (int i=0;i<nbTeam;i++)
+        {
+            m_listOfTeam.add(new team());
+        }
+
+        int team =0,i=-1;
+
+        for(int p=0;p<nbPlayer;p++)
+        {
+            m_listOfTeam.get(team).addPlayer(m_listOfPlayer.get(p));
+            team++;
+            if(team==nbTeam)
+            {
+                team=0;
+            }
+        }
+    }
+
+    public ArrayList<team> getListOfTeam() {
+        return m_listOfTeam;
+    }
+
+    public int getNbTeam()
+    {
+        return m_listOfTeam.size();
+    }
+
+
+
+}
+
+

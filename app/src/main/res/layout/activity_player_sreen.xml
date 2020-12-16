@@ -10,11 +10,11 @@
         android:id="@+id/prenom_id"
         android:layout_width="120dp"
         android:layout_height="50dp"
-        android:text="PRENOM"
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName2"
+        tools:text="PRENOM" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
@@ -23,7 +23,6 @@
         android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
@@ -55,11 +54,10 @@
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="220dp"
-        android:layout_height="50"
+        android:layout_height="50dp"
         android:layout_marginTop="70dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.43"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,9 +77,12 @@
         android:id="@+id/ajouter_but_id"
         android:layout_width="157dp"
         android:layout_height="133dp"
+        android:layout_marginBottom="96dp"
+        android:onClick="addClick"
         android:text="AJOUTER"
         app:layout_constraintBottom_toBottomOf="@+id/spinner"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.67"
         app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName2" />
 
     <Spinner
@@ -89,22 +90,29 @@
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_marginTop="40dp"
+        android:entries="@array/defaultValue"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
-    <ScrollView
-        android:id="@+id/space_player_id"
-        android:layout_width="706dp"
-        android:layout_height="649dp"
+    <ListView
+        android:id="@+id/playerlistView"
+        android:layout_width="808dp"
+        android:layout_height="611dp"
+        android:layout_marginTop="227dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner">
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="191dp"
+        android:layout_height="126dp"
+        android:layout_marginTop="44dp"
+        android:onClick="endAddPlayer"
+        android:text="terminer La saisie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ajouter_but_id" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
