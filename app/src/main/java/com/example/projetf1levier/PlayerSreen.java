@@ -3,6 +3,7 @@ package com.example.projetf1levier;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -30,6 +31,20 @@ public class PlayerSreen extends AppCompatActivity {
         adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, listItems);
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView,
+                                    View view,
+                                    int position,
+                                    long id) {
+
+                teams.removeplayer(position);
+                listItems.remove(position);
+                adapter.notifyDataSetChanged();
+            }
+        });
+
     }
 
     public void addClick(View view) {
@@ -60,7 +75,7 @@ public class PlayerSreen extends AppCompatActivity {
 
         Intent intent = new Intent(this, teamView.class);
 
-        //intent.putExtra("teamList", teams.getListOfTeam());
+        intent.putExtra("teamList", teams);
 
         startActivity(intent);
 
