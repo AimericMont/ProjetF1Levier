@@ -50,6 +50,7 @@ public class PlayerSreen extends AppCompatActivity {
     public void addClick(View view) {
 
 
+
         EditText editText = (EditText) findViewById(R.id.editTextTextPersonName);
         String name = editText.getText().toString();
 
@@ -68,9 +69,23 @@ public class PlayerSreen extends AppCompatActivity {
 
         ListView mListView = (ListView)findViewById(R.id.playerlistView);
 
+
+
     }
 
     public void endAddPlayer(View view) {
+
+        //toRemove
+        teams.addPlayer("j1","firstName1",1);
+        teams.addPlayer("j2","firstName2",2);
+        teams.addPlayer("j3","firstName3",3);
+        teams.addPlayer("j4","firstName4",4);
+        teams.addPlayer("j5","firstName5",5);
+        teams.addPlayer("j6","firstName6",6);
+        teams.addPlayer("j7","firstName7",7);
+        teams.addPlayer("j8","firstName8",8);
+        teams.addPlayer("j9","firstName9",9);
+
         teams.makeTeam();
 
         Intent intent = new Intent(this, teamView.class);
