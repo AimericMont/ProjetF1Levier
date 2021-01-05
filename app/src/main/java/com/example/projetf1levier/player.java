@@ -10,11 +10,11 @@ public class player implements Comparable , Serializable {
     String m_name;
     String m_firstName;
     int m_level;
+    long[] m_chronoPlayer;
 
     /*
     *Constructor
     * take name firstName and level of the player
-    *
      */
     public player(String _name, String _firstName, int _level)
     {
@@ -23,21 +23,19 @@ public class player implements Comparable , Serializable {
         m_level=_level;
     }
 
-
     /*
     *getter
      */
     public int getLevel() {
         return m_level;
     }
-
     public String getName() {
         return m_name;
     }
-
     public String getFirstName() {
         return m_firstName;
     }
+    public long getChronoPlayer(int _step){return m_chronoPlayer[_step];}
 
     @Override
     public int compareTo(Object p) {

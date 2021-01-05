@@ -8,14 +8,14 @@ public class teamList implements Serializable {
 
     ArrayList<team> m_listOfTeam;
     ArrayList<player> m_listOfPlayer;
-
+    int[] m_imageNum={R.drawable.pict1,R.drawable.pict2,R.drawable.pict3};
+    int[] m_imageStep={R.drawable.sprint1,R.drawable.obstacle1,R.drawable.ravitaillement,R.drawable.sprint2,R.drawable.obstacle2};
 
 
     public teamList(PlayerSreen screen)
     {
         m_listOfTeam= new ArrayList<team>();
         m_listOfPlayer= new ArrayList<player> (30);
-
     }
 
     public void addPlayer(player _p)
