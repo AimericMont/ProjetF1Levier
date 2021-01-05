@@ -20,9 +20,13 @@
 
     <GridView
         android:id="@+id/teamGridView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="407dp" />
+        android:layout_width="408dp"
+        android:layout_height="449dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:numColumns="3"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

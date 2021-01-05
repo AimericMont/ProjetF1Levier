@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".teamView">
+
+
+    <TextView
+        android:id="@+id/nameP1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="nameP1"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/firstNameP1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="72dp" />
+
+    <TextView
+        android:id="@+id/firstNameP1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="firstNameP1"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="72dp" />
+
+    <TextView
+        android:id="@+id/levelP1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="levelP1"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/firstNameP1"
+        tools:layout_editor_absoluteY="72dp" />
+
+    <TextView
+        android:id="@+id/levelP2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="levelP2"
+        android:textSize="30sp"
+        app:layout_column="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_row="1"
+        tools:layout_editor_absoluteY="142dp" />
+
+    <TextView
+        android:id="@+id/firstNameP2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="firstNameP2"
+        android:textSize="30sp"
+        app:layout_column="1"
+        app:layout_row="1"
+        tools:layout_editor_absoluteX="127dp"
+        tools:layout_editor_absoluteY="142dp" />
+
+    <TextView
+        android:id="@+id/nameP2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nameP2"
+        android:textSize="30sp"
+        app:layout_column="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_row="1"
+        tools:layout_editor_absoluteY="142dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

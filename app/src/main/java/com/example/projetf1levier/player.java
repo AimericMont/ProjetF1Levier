@@ -31,6 +31,13 @@ public class player implements Comparable , Serializable {
         return m_level;
     }
 
+    public String getName() {
+        return m_name;
+    }
+
+    public String getFirstName() {
+        return m_firstName;
+    }
 
     @Override
     public int compareTo(Object p) {

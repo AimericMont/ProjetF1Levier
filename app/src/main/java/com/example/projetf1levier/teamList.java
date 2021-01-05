@@ -8,7 +8,7 @@ public class teamList implements Serializable {
 
     ArrayList<team> m_listOfTeam;
     ArrayList<player> m_listOfPlayer;
-    //ArrayList<player> m_listOfPlayer;
+
 
 
     public teamList(PlayerSreen screen)
@@ -20,14 +20,17 @@ public class teamList implements Serializable {
 
     public void addPlayer(player _p)
     {
-
-
         m_listOfPlayer.add(_p);
     }
 
     public void addPlayer(String _name, String _firstName, int _level)
     {
         addPlayer(new player(_name,_firstName,_level));
+    }
+
+    public void removeplayer(int id)
+    {
+        m_listOfPlayer.remove(id);
     }
 
     public int getNbPlayer()
