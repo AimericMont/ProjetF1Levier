@@ -11,68 +11,72 @@
 
     <TextView
         android:id="@+id/nameP1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:text="nameP1"
         android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/firstNameP1"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toTopOf="@+id/nameP2"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="72dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/firstNameP1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:text="firstNameP1"
         android:textSize="30sp"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="72dp" />
+        app:layout_constraintBottom_toTopOf="@+id/firstNameP2"
+        app:layout_constraintEnd_toStartOf="@+id/levelP1"
+        app:layout_constraintStart_toEndOf="@+id/nameP1"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/levelP1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:text="levelP1"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/levelP2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/firstNameP1"
-        tools:layout_editor_absoluteY="72dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/levelP2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
         android:text="levelP2"
         android:textSize="30sp"
         app:layout_column="2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_row="1"
-        tools:layout_editor_absoluteY="142dp" />
+        app:layout_constraintStart_toEndOf="@+id/firstNameP2"
+        app:layout_row="1" />
 
     <TextView
         android:id="@+id/firstNameP2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:text="firstNameP2"
         android:textSize="30sp"
         app:layout_column="1"
-        app:layout_row="1"
-        tools:layout_editor_absoluteX="127dp"
-        tools:layout_editor_absoluteY="142dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nameP2"
+        app:layout_row="1" />
 
     <TextView
         android:id="@+id/nameP2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
         android:text="nameP2"
         android:textSize="30sp"
         app:layout_column="0"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_row="1"
-        tools:layout_editor_absoluteY="142dp" />
+        app:layout_row="1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
