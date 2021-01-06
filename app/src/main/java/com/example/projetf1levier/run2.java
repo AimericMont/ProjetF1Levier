@@ -7,7 +7,10 @@ import android.widget.GridView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class teamView extends AppCompatActivity {
+public class run2 extends AppCompatActivity {
+
+
+    RunAdapter m_runAdapter;
 
     //private teamList teams;
     teamList teams;
@@ -15,27 +18,27 @@ public class teamView extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_team_view);
+        setContentView(R.layout.activity_run2);
+
 
         Intent intent = getIntent();
 
         teams = (teamList)intent.getSerializableExtra("teamList");
 
-        GridView gridView = (GridView)findViewById(R.id.teamGridView);
+        GridView gridView = (GridView)findViewById(R.id.runGridView);
 
-        TeamAdapter teamAdapter = new TeamAdapter(this,teams);
 
-        gridView.setAdapter(teamAdapter);
+
+        m_runAdapter= new RunAdapter(this, teams);
+
+
+
+        gridView.setAdapter(m_runAdapter);
     }
 
-
-    public void runClick(View view) {
-
-        Intent intent = new Intent(this, run2.class);
-
-        intent.putExtra("teamList", teams);
-
-        startActivity(intent);
+    public void nextClick(View v) {
+        teams.getListOfTeam().get(0).nextStepRun();
+        m_runAdapter.notifyDataSetChanged();
     }
 
 }

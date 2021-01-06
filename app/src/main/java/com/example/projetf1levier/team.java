@@ -11,7 +11,7 @@ public class team implements Serializable {
 
     int m_teamNumber;
 
-    int m_numberPlayerRun=0;
+    int m_numberPlayerRun;
     int m_numberStepRun;
     long m_chronoTeam;
 
@@ -33,7 +33,8 @@ public class team implements Serializable {
     {
         m_playerList.add(p);
     }
-    public void nextStepRun(player p)
+
+    public void nextStepRun()
     {
         if (m_numberStepRun==4)
         {
