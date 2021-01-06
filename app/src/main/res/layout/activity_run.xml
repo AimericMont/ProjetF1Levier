@@ -10,14 +10,15 @@
         android:id="@+id/but_team2"
         android:layout_width="170dp"
         android:layout_height="100dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:background="#8BC34A"
         android:onClick="onClick"
         android:text="NEXT STEP"
         app:layout_constraintBottom_toBottomOf="@id/step_team10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/but_team1" />
+        app:layout_constraintTop_toTopOf="@+id/but_team1"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/step_team6"
@@ -453,43 +454,26 @@
         android:id="@+id/start_but"
         android:layout_width="225dp"
         android:layout_height="100dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginRight="100dp"
+        android:layout_marginTop="36dp"
         android:onClick="startChrono"
         android:text="START RUN"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.875" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/but_team9" />
 
     <Button
         android:id="@+id/results_but"
         android:layout_width="225dp"
         android:layout_height="100dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginRight="100dp"
         android:text="SHOW RESULTS"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/start_but"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/start_but"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.972" />
-
-    <Chronometer
-        android:id="@+id/chrono_id"
-        android:layout_width="382dp"
-        android:layout_height="199dp"
-        android:ems="10"
-        android:inputType="time"
-        android:textSize="70sp"
-        app:layout_constraintBottom_toBottomOf="@+id/results_but"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.102"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.971" />
+        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintStart_toEndOf="@+id/start_but"
+        app:layout_constraintTop_toTopOf="@+id/start_but"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/timerValue"

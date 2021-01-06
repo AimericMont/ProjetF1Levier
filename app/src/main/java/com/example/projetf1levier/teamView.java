@@ -19,12 +19,9 @@ public class teamView extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-
         teams = (teamList)intent.getSerializableExtra("teamList");
 
         GridView gridView = (GridView)findViewById(R.id.teamGridView);
-
-
 
         TeamAdapter teamAdapter = new TeamAdapter(this,teams);
 
@@ -34,13 +31,11 @@ public class teamView extends AppCompatActivity {
 
     public void runClick(View view) {
 
-
-        Intent intent = new Intent(this, teamView.class);
+        Intent intent = new Intent(this, Run.class);
 
         intent.putExtra("teamList", teams);
 
         startActivity(intent);
-
     }
 
 }

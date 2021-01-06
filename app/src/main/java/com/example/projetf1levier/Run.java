@@ -3,19 +3,24 @@ package com.example.projetf1levier;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Chronometer;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 
 public class Run extends AppCompatActivity {
+
+    //private teamList teams;
+    teamList teams;
 
     Button btnStart, btnLap;
     TextView txtTimer;
@@ -43,10 +48,19 @@ public class Run extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_run);
 
+        Intent intent = getIntent();
+        teams = (teamList)intent.getSerializableExtra("teamList");
+
         btnStart=(Button)findViewById(R.id.start_but);
         btnLap=(Button)findViewById(R.id.results_but);
         txtTimer=(TextView)findViewById(R.id.timerValue);
-        container = (LinearLayout)findViewById(R.id.container);
+
+        InterfaceTeamRun Team1((TextView)findViewById(R.id.title_team1),(Button)findViewById(R.id.but_team1),(ImageView)findViewById(R.id.step_team1),(ImageView)findViewById(R.id.num_player_team1));
+
+
+       /* TextView txtValue2 = (TextView) findViewById(R.id.title_team2);
+        txtValue2.setText(teams.getListOfTeam().get(0).getPlayerList().get(stepcont).getFirstName());
+        ;*/
 
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,13 +77,20 @@ public class Run extends AppCompatActivity {
                 //   View addView =inflater.inflate(R.layout.row,null);
                 TextView txtValue = (TextView) findViewById(R.id.title_team1);
                 txtValue.setText(txtTimer.getText());
-                // container.addView(addView);
             }
         });
     }
 
 
-    int stepcont=1;
+
+
+
+
+
+
+
+
+    int stepcont;
     int playercont=0;
 
     public void processClick(View v, int but_team, int img_player, int img_step)
@@ -113,12 +134,4 @@ public class Run extends AppCompatActivity {
                 break;
         }
     }
-
-    public void startChrono(View v){
-        Chronometer chronoText;
-        chronoText=findViewById(R.id.chrono_id);
-        chronoText.setBase(SystemClock.elapsedRealtime());
-        chronoText.start();
-    }
-
 }
