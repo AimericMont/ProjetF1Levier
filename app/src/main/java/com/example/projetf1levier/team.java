@@ -8,17 +8,25 @@ import java.util.ArrayList;
  */
 public class team implements Serializable {
     ArrayList<player> m_playerList;
+
+    int m_teamNumber;
+
     int m_numberPlayerRun=0;
     int m_numberStepRun;
     long m_chronoTeam;
 
+
     /*
     *Constructor
      */
-    public team()
+    public team(int teamNumber)
     {
         m_playerList= new ArrayList<player>(3);
+
+        m_teamNumber=teamNumber;
+
         m_numberPlayerRun =0;
+
     }
 
     public void addPlayer(player p)
@@ -41,8 +49,19 @@ public class team implements Serializable {
     /*
     *getter
      */
+
+    public ArrayList<player> getPlayerList() {
+        return m_playerList;
+    }
+
+    public int getTeamNumber()
+    {
+        return m_teamNumber;
+    }
+
     public ArrayList<player> getPlayerList() {return m_playerList;}
     public int getNumberPlayerRun(){return  m_numberPlayerRun;}
     public int getNumberStepRun(){return  m_numberStepRun;}
     public long getChronoTeam(){return m_chronoTeam;}
+
 }

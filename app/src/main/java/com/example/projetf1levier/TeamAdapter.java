@@ -42,25 +42,24 @@ public class TeamAdapter extends BaseAdapter {
 
         convertView = inflter.inflate(R.layout.grid_view_team, null); // inflate the layout
         //convertView = LayoutInflater.from(m_context).inflate(R.layout.activity_team_view, parent, false);;
+        team t=m_teams.getListOfTeam().get(position);
 
-        String name=m_teams.getListOfTeam().get(position).getPlayerList().get(1).getName();
-
-        player p1=m_teams.getListOfTeam().get(position).getPlayerList().get(1);
-        player p2=m_teams.getListOfTeam().get(position).getPlayerList().get(2);
+        player p1=t.getPlayerList().get(0);
+        player p2=t.getPlayerList().get(1);
+        player p3=t.getPlayerList().get(2);
 
         TextView nameP1 = (TextView) convertView.findViewById(R.id.nameP1);
         TextView nameP2 = (TextView) convertView.findViewById(R.id.nameP2);
-        TextView firstNameP1 = (TextView) convertView.findViewById(R.id.firstNameP1);
-        TextView firstNameP2 = (TextView) convertView.findViewById(R.id.firstNameP2);
-        TextView levelP1 = (TextView) convertView.findViewById(R.id.levelP1);
-        TextView levelP2 = (TextView) convertView.findViewById(R.id.levelP2);
+        TextView nameP3 = (TextView) convertView.findViewById(R.id.nameP3);
 
-        nameP1.setText(p1.getName());
-        nameP2.setText(p2.getName());
-        firstNameP1.setText(p1.getFirstName());
-        firstNameP2.setText(p2.getFirstName());
-        levelP1.setText(String.valueOf(p1.getLevel()));
-        levelP2.setText(String.valueOf(p2.getLevel()));
+        TextView teamName = (TextView) convertView.findViewById(R.id.teamName);
+
+        nameP1.setText(p1.getFullName());
+        nameP2.setText(p2.getFullName());
+        nameP3.setText(p3.getFullName());
+
+        teamName.setText("Equipe " + t.getTeamNumber());
+
         return convertView;
     }
 }
