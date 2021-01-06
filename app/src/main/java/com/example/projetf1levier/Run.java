@@ -1,7 +1,5 @@
 package com.example.projetf1levier;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import androidx.appcompat.app.AppCompatActivity;
 
 
 public class Run extends AppCompatActivity {
@@ -55,7 +53,7 @@ public class Run extends AppCompatActivity {
         btnLap=(Button)findViewById(R.id.results_but);
         txtTimer=(TextView)findViewById(R.id.timerValue);
 
-        InterfaceTeamRun Team1((TextView)findViewById(R.id.title_team1),(Button)findViewById(R.id.but_team1),(ImageView)findViewById(R.id.step_team1),(ImageView)findViewById(R.id.num_player_team1));
+        //InterfaceTeamRun Team1((TextView)findViewById(R.id.title_team1),(Button)findViewById(R.id.but_team1),(ImageView)findViewById(R.id.step_team1),(ImageView)findViewById(R.id.num_player_team1));
 
 
        /* TextView txtValue2 = (TextView) findViewById(R.id.title_team2);
