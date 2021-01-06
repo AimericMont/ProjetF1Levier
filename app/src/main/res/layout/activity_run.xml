@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/but_team2"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#8BC34A"
+        android:onClick="onClick"
+        android:text="NEXT STEP"
+        app:layout_constraintBottom_toBottomOf="@id/step_team10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/but_team1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/step_team6"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/but_team5"
+        app:layout_constraintEnd_toStartOf="@+id/but_team6"
+        app:layout_constraintStart_toEndOf="@+id/num_player_team6"
+        app:layout_constraintTop_toTopOf="@+id/but_team5"
+        app:srcCompat="@drawable/sprint1" />
+
+    <ImageView
+        android:id="@+id/step_team10"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/but_team9"
+        app:layout_constraintEnd_toStartOf="@+id/but_team10"
+        app:layout_constraintStart_toEndOf="@+id/num_player_team10"
+        app:layout_constraintTop_toTopOf="@+id/but_team9"
+        app:srcCompat="@drawable/sprint1" />
+
+    <Button
+        android:id="@+id/but_team8"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#323232"
+        android:text="NEXT STEP"
+        app:layout_constraintBottom_toBottomOf="@+id/step_team8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/step_team8" />
+
+    <ImageView
+        android:id="@+id/num_player_team4"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/but_team3"
+        app:layout_constraintEnd_toEndOf="@+id/num_player_team2"
+        app:layout_constraintStart_toStartOf="@+id/num_player_team2"
+        app:layout_constraintTop_toTopOf="@+id/but_team3"
+        app:srcCompat="@drawable/pict1" />
+
+    <Button
+        android:id="@+id/but_team4"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFEB3B"
+        android:onClick="onClick"
+        android:text="NEXT STEP"
+        app:layout_constraintBottom_toBottomOf="@+id/step_team4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/step_team4" />
+
+    <TextView
+        android:id="@+id/title_team10"
+        android:layout_width="368dp"
+        android:layout_height="32dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/title_team9"
+        app:layout_constraintEnd_toEndOf="@+id/but_team10"
+        app:layout_constraintStart_toStartOf="@+id/num_player_team10"
+        app:layout_constraintTop_toTopOf="@+id/title_team9" />
+
+    <ImageView
+        android:id="@+id/num_player_team6"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/but_team5"
+        app:layout_constraintEnd_toEndOf="@+id/num_player_team4"
+        app:layout_constraintStart_toStartOf="@+id/num_player_team4"
+        app:layout_constraintTop_toTopOf="@+id/but_team5"
+        app:srcCompat="@drawable/pict1" />
+
+    <ImageView
+        android:id="@+id/num_player_team8"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/but_team7"
+        app:layout_constraintEnd_toEndOf="@+id/num_player_team6"
+        app:layout_constraintStart_toStartOf="@+id/num_player_team6"
+        app:layout_constraintTop_toTopOf="@+id/but_team7"
+        app:srcCompat="@drawable/pict1" />
+
+    <TextView
+        android:id="@+id/title_team4"
+        android:layout_width="368dp"
+        android:layout_height="32dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/title_team3"
+        app:layout_constraintEnd_toEndOf="@+id/but_team4"
+        app:layout_constraintStart_toStartOf="@+id/num_player_team4"
+        app:layout_constraintTop_toTopOf="@+id/title_team3" />
+
+    <ImageView
+        android:id="@+id/step_team8"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/num_player_team8"
+        app:layout_constraintEnd_toStartOf="@+id/but_team8"
+        app:layout_constraintStart_toEndOf="@+id/num_player_team8"
+        app:layout_constraintTop_toTopOf="@+id/num_player_team8"
+        app:srcCompat="@drawable/sprint1" />
+
+    <Button
+        android:id="@+id/but_team10"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#9CD000FF"
+        android:text="NEXT STEP"
+        app:layout_constraintBottom_toBottomOf="@+id/but_team9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/but_team8"
+        app:layout_constraintTop_toTopOf="@+id/but_team9" />
+
+    <ImageView
+        android:id="@+id/num_player_team2"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginLeft="130dp"
+        app:layout_constraintBottom_toBottomOf="@+id/but_team1"
+        app:layout_constraintStart_toStartOf="@+id/title_run_id"
+        app:layout_constraintTop_toTopOf="@+id/but_team1"
+        app:srcCompat="@drawable/pict1" />
+
+    <Button
+        android:id="@+id/but_team6"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FF9800"
+        android:text="NEXT STEP"
+        app:layout_constraintBottom_toBottomOf="@+id/but_team5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/but_team5" />
+
+    <ImageView
+        android:id="@+id/step_team2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/but_team1"
+        app:layout_constraintEnd_toStartOf="@+id/but_team2"
+        app:layout_constraintStart_toEndOf="@+id/num_player_team2"
+        app:layout_constraintTop_toTopOf="@+id/but_team1"
+        app:srcCompat="@drawable/sprint1" />
+
+    <TextView
+        android:id="@+id/title_team6"
+        android:layout_width="368dp"
+        android:layout_height="32dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/title_team5"
+        app:layout_constraintEnd_toEndOf="@+id/but_team6"
+        app:layout_constraintStart_toStartOf="@+id/num_player_team6"
+        app:layout_constraintTop_toTopOf="@+id/title_team5" />
+
+    <ImageView
+        android:id="@+id/num_player_team10"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/but_team9"
+        app:layout_constraintEnd_toEndOf="@+id/num_player_team8"
+        app:layout_constraintStart_toStartOf="@+id/num_player_team8"
+        app:layout_constraintTop_toTopOf="@+id/but_team9"
+        app:srcCompat="@drawable/pict1" />
+
+    <ImageView
+        android:id="@+id/step_team4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/num_player_team4"
+        app:layout_constraintEnd_toStartOf="@+id/but_team4"
+        app:layout_constraintStart_toEndOf="@+id/num_player_team4"
+        app:layout_constraintTop_toTopOf="@+id/num_player_team4"
+        app:srcCompat="@drawable/sprint1" />
+
+    <TextView
+        android:id="@+id/title_team2"
+        android:layout_width="368dp"
+        android:layout_height="32dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/title_team1"
+        app:layout_constraintEnd_toEndOf="@+id/but_team2"
+        app:layout_constraintStart_toStartOf="@+id/num_player_team2"
+        app:layout_constraintTop_toTopOf="@+id/title_team1" />
+
+    <TextView
+        android:id="@+id/title_team8"
+        android:layout_width="368dp"
+        android:layout_height="32dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/title_team7"
+        app:layout_constraintEnd_toEndOf="@+id/but_team8"
+        app:layout_constraintStart_toStartOf="@+id/num_player_team8"
+        app:layout_constraintTop_toTopOf="@+id/title_team7" />
+
+    <Button
+        android:id="@+id/but_team9"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:background="#009688"
+        android:text="NEXT STEP"
+        app:layout_constraintEnd_toEndOf="@+id/but_team7"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/but_team7"
+        app:layout_constraintTop_toBottomOf="@+id/but_team7" />
+
+    <ImageView
+        android:id="@+id/step_team9"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/but_team9"
+        app:layout_constraintEnd_toStartOf="@+id/but_team9"
+        app:layout_constraintStart_toEndOf="@+id/num_player_team9"
+        app:layout_constraintTop_toTopOf="@+id/but_team9"
+        app:srcCompat="@drawable/sprint1" />
+
+    <TextView
+        android:id="@+id/title_team9"
+        android:layout_width="368dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="10dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/but_team9"
+        app:layout_constraintEnd_toEndOf="@+id/but_team9"
+        app:layout_constraintStart_toStartOf="@+id/num_player_team9" />
+
+    <ImageView
+        android:id="@+id/num_player_team9"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/step_team9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/step_team9"
+        app:srcCompat="@drawable/pict1" />
+
+    <Button
+        android:id="@+id/but_team7"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:background="#2196F3"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="@+id/but_team5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/but_team5"
+        app:layout_constraintTop_toBottomOf="@+id/but_team5" />
+
+    <ImageView
+        android:id="@+id/step_team7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/but_team7"
+        app:layout_constraintEnd_toStartOf="@+id/but_team7"
+        app:layout_constraintStart_toEndOf="@+id/num_player_team7"
+        app:layout_constraintTop_toTopOf="@+id/but_team7"
+        app:srcCompat="@drawable/sprint1" />
+
+    <TextView
+        android:id="@+id/title_team7"
+        android:layout_width="368dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="10dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/but_team7"
+        app:layout_constraintEnd_toEndOf="@+id/but_team7"
+        app:layout_constraintStart_toStartOf="@+id/num_player_team7" />
+
+    <ImageView
+        android:id="@+id/num_player_team7"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/but_team7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/step_team7"
+        app:srcCompat="@drawable/pict1" />
+
+    <Button
+        android:id="@+id/but_team5"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:background="#3F51B5"
+        android:text="NEXT STEP"
+        app:layout_constraintEnd_toEndOf="@+id/but_team3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/but_team3"
+        app:layout_constraintTop_toBottomOf="@+id/but_team3" />
+
+    <ImageView
+        android:id="@+id/step_team5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/but_team5"
+        app:layout_constraintEnd_toStartOf="@+id/but_team5"
+        app:layout_constraintStart_toEndOf="@+id/num_player_team5"
+        app:layout_constraintTop_toTopOf="@+id/but_team5"
+        app:srcCompat="@drawable/sprint1" />
+
+    <TextView
+        android:id="@+id/title_team5"
+        android:layout_width="368dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="10dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/but_team5"
+        app:layout_constraintEnd_toEndOf="@+id/but_team5"
+        app:layout_constraintStart_toStartOf="@+id/num_player_team5" />
+
+    <ImageView
+        android:id="@+id/num_player_team5"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/step_team5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/step_team5"
+        app:srcCompat="@drawable/pict1" />
+
+    <Button
+        android:id="@+id/but_team3"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:background="#E80653"
+        android:onClick="onClick"
+        android:text="NEXT STEP"
+        app:layout_constraintEnd_toEndOf="@+id/but_team1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/but_team1"
+        app:layout_constraintTop_toBottomOf="@+id/but_team1" />
+
+    <ImageView
+        android:id="@+id/step_team3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/but_team3"
+        app:layout_constraintEnd_toStartOf="@+id/but_team3"
+        app:layout_constraintStart_toEndOf="@+id/num_player_team3"
+        app:layout_constraintTop_toTopOf="@+id/but_team3"
+        app:srcCompat="@drawable/sprint1" />
+
+    <TextView
+        android:id="@+id/title_team3"
+        android:layout_width="368dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="10dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/but_team3"
+        app:layout_constraintEnd_toEndOf="@+id/but_team3"
+        app:layout_constraintStart_toStartOf="@+id/num_player_team3" />
+
+    <ImageView
+        android:id="@+id/num_player_team3"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/step_team3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/step_team3"
+        app:srcCompat="@drawable/pict1" />
+
+    <Button
+        android:id="@+id/but_team1"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginRight="130dp"
+        android:background="#F44336"
+        android:onClick="onClick"
+        android:text="NEXT STEP"
+        app:layout_constraintEnd_toEndOf="@+id/title_run_id"
+        app:layout_constraintTop_toBottomOf="@+id/title_run_id" />
+
+    <ImageView
+        android:id="@+id/step_team1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/but_team1"
+        app:layout_constraintEnd_toStartOf="@+id/but_team1"
+        app:layout_constraintStart_toEndOf="@+id/num_player_team1"
+        app:layout_constraintTop_toTopOf="@+id/but_team1"
+        app:srcCompat="@drawable/sprint1" />
+
+    <ImageView
+        android:id="@+id/num_player_team1"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/step_team1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/step_team1"
+        app:srcCompat="@drawable/pict1" />
+
+    <TextView
+        android:id="@+id/title_team1"
+        android:layout_width="368dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="10dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/but_team1"
+        app:layout_constraintEnd_toEndOf="@+id/but_team1"
+        app:layout_constraintStart_toStartOf="@+id/num_player_team1" />
+
+    <TextView
+        android:id="@+id/title_run_id"
+        android:layout_width="210dp"
+        android:layout_height="120dp"
+        android:text="RUN"
+        android:textSize="100sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <Button
+        android:id="@+id/start_but"
+        android:layout_width="225dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="36dp"
+        android:onClick="startChrono"
+        android:text="START RUN"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/but_team9" />
+
+    <Button
+        android:id="@+id/results_but"
+        android:layout_width="225dp"
+        android:layout_height="100dp"
+        android:text="SHOW RESULTS"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/start_but"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintStart_toEndOf="@+id/start_but"
+        app:layout_constraintTop_toTopOf="@+id/start_but"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/timerValue"
+        android:layout_width="209dp"
+        android:layout_height="159dp"
+        android:layout_gravity="center_horizontal"
+        android:text="0:00:00"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.034"></TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
