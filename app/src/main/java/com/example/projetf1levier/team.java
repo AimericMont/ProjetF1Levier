@@ -50,9 +50,6 @@ public class team implements Serializable {
     *getter
      */
 
-    public ArrayList<player> getPlayerList() {
-        return m_playerList;
-    }
 
     public int getTeamNumber()
     {
