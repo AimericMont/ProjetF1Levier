@@ -18,6 +18,16 @@ public class teamList implements Serializable {
         m_listOfPlayer= new ArrayList<player> (30);
     }
 
+    public int getImageNum(int n)
+    {
+        return m_imageNum[n];
+    }
+
+    public int getImageStep(int n)
+    {
+        return m_imageStep[n];
+    }
+
     public void addPlayer(player _p)
     {
         m_listOfPlayer.add(_p);
@@ -37,6 +47,7 @@ public class teamList implements Serializable {
     {
         return m_listOfPlayer.size();
     }
+
 
 
     public void makeTeam()
