@@ -21,7 +21,7 @@ public class run2 extends AppCompatActivity {
     //private teamList teams;
     teamList teams;
     long pastChrono;
-    int ChronoCours;
+    long ChronoCours;
     int position=0;
 
     Button btnStart, btnLap;
@@ -38,7 +38,7 @@ public class run2 extends AppCompatActivity {
             int mins=secs/60;
             secs%=60;
             int milliseconds=(int)(updateTime%1000);
-            ChronoCours=milliseconds+secs*1000+mins*100000;
+            ChronoCours= updateTime;
             txtTimer.setText(""+mins+":"+String.format("%02d",secs)+":"+String.format("%3d",milliseconds));
             customeHandler.postDelayed(this,0);
         }
@@ -53,9 +53,8 @@ public class run2 extends AppCompatActivity {
         teams = (teamList)intent.getSerializableExtra("teamList");
 
         GridView gridView = (GridView)findViewById(R.id.runGridView);
-        gridView.setAdapter(m_runAdapter);
-
         m_runAdapter= new RunAdapter(this, teams);
+        gridView.setAdapter(m_runAdapter);
 
         btnStart=(Button)findViewById(R.id.start_but);
         btnLap=(Button)findViewById(R.id.results_but);
@@ -76,17 +75,25 @@ public class run2 extends AppCompatActivity {
                 LayoutInflater inflater=(LayoutInflater)getBaseContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 //   View addView =inflater.inflate(R.layout.row,null);
                 TextView txtValue = (TextView) findViewById(R.id.recupChrono);
+
+                team currentTeam=teams.getListOfTeam().get(0);
+
+                currentTeam.getPlayerList().get(currentTeam.getNumberPlayerRun()).addChrono(ChronoCours-pastChrono);
+
                 //txtValue.setText(txtTimer.getText());
-                txtValue.setText(String.valueOf(ChronoCours-pastChrono));
+                //txtValue.setText(String.valueOf(ChronoCours-pastChrono));
                 pastChrono=ChronoCours;
+
+
+                teams.getListOfTeam().get(0).nextStepRun();
+                m_runAdapter.notifyDataSetChanged();
             }
         });
 
     }
 
     public void nextClick(View v) {
-        teams.getListOfTeam().get(0).nextStepRun();
-        m_runAdapter.notifyDataSetChanged();
+
     }
 
     public void resultClick(View view) {

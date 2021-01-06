@@ -47,6 +47,7 @@ public class team implements Serializable {
         }
     }
 
+
     /*
     *getter
      */
