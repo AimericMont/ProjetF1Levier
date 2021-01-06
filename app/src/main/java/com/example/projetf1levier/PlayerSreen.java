@@ -45,6 +45,7 @@ public class PlayerSreen extends AppCompatActivity {
                                     long id) {
 
                 m_itemSelected=position;
+
                 ImageButton deleteIcon = (ImageButton) findViewById(R.id.deleteIcon);
                 deleteIcon.setVisibility(view.VISIBLE);
                 deleteIcon.setOnClickListener(new View.OnClickListener() {

@@ -14,7 +14,7 @@
         app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName2"
-        tools:text="PRENOM" />
+        android:text="PRENOM" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"

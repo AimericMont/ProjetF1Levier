@@ -466,6 +466,7 @@
         android:id="@+id/results_but"
         android:layout_width="225dp"
         android:layout_height="100dp"
+        android:onClick="resultsClick"
         android:text="SHOW RESULTS"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/start_but"
@@ -488,5 +489,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.034"></TextView>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="resultsClick"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="@+id/start_but"
+        app:layout_constraintEnd_toStartOf="@+id/start_but"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/start_but" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

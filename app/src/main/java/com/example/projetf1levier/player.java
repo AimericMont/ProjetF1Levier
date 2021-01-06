@@ -1,6 +1,7 @@
 package com.example.projetf1levier;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /*
 *Class player
@@ -10,7 +11,7 @@ public class player implements Comparable , Serializable {
     String m_name;
     String m_firstName;
     int m_level;
-    long[] m_chronoPlayer;
+    ArrayList<Long> m_chronoPlayer;
 
     /*
     *Constructor
@@ -21,6 +22,7 @@ public class player implements Comparable , Serializable {
         m_name=_name;
         m_firstName=_firstName;
         m_level=_level;
+        m_chronoPlayer=null;
     }
 
     /*
@@ -39,11 +41,16 @@ public class player implements Comparable , Serializable {
         return getName() + " - " + getFirstName() ;
     }
 
-
     public String getFirstName() {
         return m_firstName;
     }
-    public long getChronoPlayer(int _step){return m_chronoPlayer[_step];}
+
+    public void addChrono (long _chrono)
+    {
+        m_chronoPlayer.add(_chrono);
+    }
+
+    public long getChronoPlayer(int _step){return m_chronoPlayer.get(_step);}
 
     @Override
     public int compareTo(Object p) {
