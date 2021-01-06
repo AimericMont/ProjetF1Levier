@@ -94,6 +94,17 @@
         app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
+    <ListView
+        android:id="@+id/playerlistView"
+        android:layout_width="808dp"
+        android:layout_height="611dp"
+        android:layout_marginTop="227dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="191dp"
@@ -119,12 +130,13 @@
 
     <ImageButton
         android:id="@+id/deleteIcon"
-        android:layout_width="115dp"
-        android:layout_height="101dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="120dp"
-        android:layout_marginRight="120dp"
-        android:visibility="visible"
+        android:layout_width="79dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:scaleType="fitCenter"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
         app:srcCompat="@drawable/t_l_chargement" />
