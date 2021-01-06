@@ -8,13 +8,14 @@ import java.util.ArrayList;
  */
 public class team implements Serializable {
     ArrayList<player> m_playerList;
-
+    int m_teamNumber;
     /*
     *Constructor
      */
-    public team()
+    public team(int teamNumber)
     {
         m_playerList= new ArrayList<player>(3);
+        m_teamNumber=teamNumber;
     }
 
 
@@ -28,5 +29,10 @@ public class team implements Serializable {
      */
     public ArrayList<player> getPlayerList() {
         return m_playerList;
+    }
+
+    public int getTeamNumber()
+    {
+        return m_teamNumber;
     }
 }
