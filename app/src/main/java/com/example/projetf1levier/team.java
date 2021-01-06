@@ -63,6 +63,7 @@ public class team implements Serializable {
         }
     }
 
+
     public void addChrono (long _chrono)
     {
         m_chronoPlayer.add(m_pastChrono-_chrono);
@@ -76,6 +77,7 @@ public class team implements Serializable {
     {
         m_pastChrono=t;
     }
+
 
     /*
     *getter
