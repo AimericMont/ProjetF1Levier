@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="runClick"
     tools:context=".teamView">
 
 
@@ -46,6 +45,7 @@
         android:layout_height="100dp"
         android:background="#F44336"
         android:clickable="true"
+        android:linksClickable="true"
         android:text="NEXT STEP"
         app:layout_constraintEnd_toEndOf="@+id/title_team"
         app:layout_constraintTop_toTopOf="@+id/step_team" />

@@ -5,40 +5,39 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.TextView;
-
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class run2 extends AppCompatActivity {
 
     RunAdapter m_runAdapter;
-
+    Context c=this;
     //private teamList teams;
     teamList teams;
-    long pastChrono;
-    int ChronoCours;
+
+    long ChronoCours;
     int position=0;
 
     Button btnStart, btnLap;
     TextView txtTimer;
     Handler customeHandler = new Handler();
-    long startTime=0L,timeInMilliSeconds=0L,timeSwapBuff=0L,updateTime=0L;
+    long startTime=0L,timeInMilliSeconds=0L,timeSwapBuff=0L;
+
+
 
     Runnable updateTimerThread = new Runnable() {
         @Override
         public void run() {
             timeInMilliSeconds = SystemClock.uptimeMillis()-startTime;
-            updateTime=timeSwapBuff+timeInMilliSeconds;
-            int secs=(int)(updateTime/1000);
+            ChronoCours=timeSwapBuff+timeInMilliSeconds;
+            int secs=(int)(ChronoCours/1000);
             int mins=secs/60;
             secs%=60;
-            int milliseconds=(int)(updateTime%1000);
-            ChronoCours=milliseconds+secs*1000+mins*100000;
+            int milliseconds=(int)(ChronoCours%1000);
             txtTimer.setText(""+mins+":"+String.format("%02d",secs)+":"+String.format("%3d",milliseconds));
             customeHandler.postDelayed(this,0);
         }
@@ -53,34 +52,22 @@ public class run2 extends AppCompatActivity {
         teams = (teamList)intent.getSerializableExtra("teamList");
 
         GridView gridView = (GridView)findViewById(R.id.runGridView);
+        m_runAdapter= new RunAdapter(this, teams);
         gridView.setAdapter(m_runAdapter);
 
-        m_runAdapter= new RunAdapter(this, teams);
 
         btnStart=(Button)findViewById(R.id.start_but);
         btnLap=(Button)findViewById(R.id.results_but);
         txtTimer=(TextView)findViewById(R.id.timerValue2);
 
-        btnStart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startTime=SystemClock.uptimeMillis();
-                customeHandler.postDelayed(updateTimerThread,0);
-                btnStart.setVisibility(view.INVISIBLE);
-            }
-        });
 
-        btnLap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                LayoutInflater inflater=(LayoutInflater)getBaseContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                //   View addView =inflater.inflate(R.layout.row,null);
-                TextView txtValue = (TextView) findViewById(R.id.recupChrono);
-                //txtValue.setText(txtTimer.getText());
-                txtValue.setText(String.valueOf(ChronoCours-pastChrono));
-                pastChrono=ChronoCours;
-            }
-        });
+    }
+
+    public void start(View view)
+    {
+
+
+        m_runAdapter.start();
 
     }
 
@@ -89,10 +76,24 @@ public class run2 extends AppCompatActivity {
         m_runAdapter.notifyDataSetChanged();
     }
 
+    public void runClick(View view) {
+
+    }
+
     public void resultClick(View view) {
         Intent intent = new Intent(this, Results.class);
         intent.putExtra("teamList", teams);
         startActivity(intent);
+    }
+
+    public Button getButtonStart()
+    {
+        return btnStart;
+    }
+
+    public TextView getTextTimmer()
+    {
+        return txtTimer;
     }
 
 }
