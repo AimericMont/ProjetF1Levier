@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +22,6 @@ public class Run extends AppCompatActivity {
     Button btnStart, btnLap;
     TextView txtTimer;
     Handler customeHandler = new Handler();
-    LinearLayout container;
 
     long startTime=0L,timeInMilliSeconds=0L,timeSwapBuff=0L,updateTime=0L;
 

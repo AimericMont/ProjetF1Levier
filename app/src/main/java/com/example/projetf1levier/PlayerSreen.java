@@ -40,7 +40,6 @@ public class PlayerSreen extends AppCompatActivity {
                                     View view,
                                     int position,
                                     long id) {
-
                 ImageButton deleteIcon = (ImageButton) findViewById(R.id.deleteIcon);
                 deleteIcon.setVisibility(view.VISIBLE);
                 teams.removeplayer(position);
