@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="entityValues">
+        <item>Team</item>
+        <item>Player</item>
+    </string-array>
+
+    <string-array name="stepValues">
+        <item>All Course</item>
+        <item>Sprint</item>
+        <item>Obstacle</item>
+        <item>Ravitaillement</item>
+        <item>Tour 1</item>
+        <item>Tour 2</item>
+    </string-array>
+</resources>
