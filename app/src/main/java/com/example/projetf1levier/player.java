@@ -35,6 +35,11 @@ public class player implements Comparable , Serializable {
         return m_name;
     }
 
+    public String getFullName()
+    {
+        return getName() + " - " + getFirstName() ;
+    }
+
     public String getFirstName() {
         return m_firstName;
     }

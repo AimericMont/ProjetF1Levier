@@ -48,7 +48,7 @@ public class teamList implements Serializable {
 
         for (int i=0;i<nbTeam;i++)
         {
-            m_listOfTeam.add(new team());
+            m_listOfTeam.add(new team(i+1));
         }
 
         int team =0,i=-1;
