@@ -78,6 +78,8 @@ public class Results extends AppCompatActivity {
             StringTimeByStep.add(listTimeByStep.get(taille).getSecond()+listTimeByStep.get(taille).getFirst());
         }
 
+
+        //test bie
         return StringTimeByStep;
     }
 
