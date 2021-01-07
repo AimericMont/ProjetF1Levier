@@ -75,7 +75,7 @@ public class Results extends AppCompatActivity {
 
         for (int taille=0;taille<listTimeByStep.size();taille++)
         {
-            StringTimeByStep.add(listTimeByStep.get(taille).getSecond()+listTimeByStep.get(taille).getFirst());
+            StringTimeByStep.add(listTimeByStep.get(taille).getSecond()+String.valueOf(listTimeByStep.get(taille).getFirst()));
         }
 
 
