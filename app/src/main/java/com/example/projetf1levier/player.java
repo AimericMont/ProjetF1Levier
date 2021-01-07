@@ -1,7 +1,6 @@
 package com.example.projetf1levier;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
 /*
 *Class player
@@ -38,7 +37,7 @@ public class player implements Comparable , Serializable {
 
     public String getFullName()
     {
-        return getName() + " - " + getFirstName() ;
+        return getName() + " - " + getFirstName() +" - " +m_level;
     }
 
     public String getFirstName() {

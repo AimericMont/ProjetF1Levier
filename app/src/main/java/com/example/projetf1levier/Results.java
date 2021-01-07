@@ -49,7 +49,7 @@ public class Results extends AppCompatActivity {
 
         ArrayList<String> affichageResult=null;
         listItems.clear();
-        affichageResult=getTimeByplayer();
+        affichageResult=getTimeByTeam();
 
         for (int i=0;i<affichageResult.size();i++)
         {
@@ -174,14 +174,14 @@ public class Results extends AppCompatActivity {
 
         Collections.sort(listTimeByStep, new Comparator<Pair>() {
             @Override
-            public int compare(Pair p2, Pair p1) {
+            public int compare(Pair p1, Pair p2) {
                 return p1.first.compareTo(p2.first);
             }
         });
 
         for (int taille=0;taille<listTimeByStep.size();taille++)
         {
-            StringTimeByPlayer.add(taille+"-"+listTimeByStep.get(taille).getSecond()+" - "+listTimeByStep.get(taille).getFirst()/1000+":"+listTimeByStep.get(taille).getFirst()%1000);
+            StringTimeByPlayer.add(taille+1+"-"+listTimeByStep.get(taille).getSecond()+" - "+listTimeByStep.get(taille).getFirst()/1000+":"+listTimeByStep.get(taille).getFirst()%1000);
         }
 
         return StringTimeByPlayer;
@@ -215,14 +215,14 @@ public class Results extends AppCompatActivity {
 
         Collections.sort(listTimeByStep, new Comparator<Pair>() {
             @Override
-            public int compare(Pair p2, Pair p1) {
+            public int compare(Pair p1, Pair p2) {
                 return p1.first.compareTo(p2.first);
             }
         });
 
         for (int taille=0;taille<listTimeByStep.size();taille++)
         {
-            StringTimeByPlayer.add(taille+"-"+listTimeByStep.get(taille).getSecond()+" - "+listTimeByStep.get(taille).getFirst()/1000+":"+listTimeByStep.get(taille).getFirst()%1000);
+            StringTimeByPlayer.add(taille+1+"-"+listTimeByStep.get(taille).getSecond()+" - "+listTimeByStep.get(taille).getFirst()/1000+":"+listTimeByStep.get(taille).getFirst()%1000);
         }
 
         return StringTimeByPlayer;
@@ -252,14 +252,14 @@ public class Results extends AppCompatActivity {
 
         Collections.sort(listTimeByStep, new Comparator<Pair>() {
             @Override
-            public int compare(Pair p2, Pair p1) {
+            public int compare(Pair p1, Pair p2) {
                 return p1.first.compareTo(p2.first);
             }
         });
 
         for (int taille=0;taille<listTimeByStep.size();taille++)
         {
-            StringTimeByPlayer.add(taille+"-"+listTimeByStep.get(taille).getSecond()+" - "+listTimeByStep.get(taille).getFirst()/1000+":"+listTimeByStep.get(taille).getFirst()%1000);
+            StringTimeByPlayer.add(taille+1+"-"+listTimeByStep.get(taille).getSecond()+" - "+listTimeByStep.get(taille).getFirst()/1000+":"+listTimeByStep.get(taille).getFirst()%1000);
         }
 
         return StringTimeByPlayer;
@@ -289,14 +289,14 @@ public class Results extends AppCompatActivity {
 
         Collections.sort(listTimeByStep, new Comparator<Pair>() {
             @Override
-            public int compare(Pair p2, Pair p1) {
+            public int compare(Pair p1, Pair p2) {
                 return p1.first.compareTo(p2.first);
             }
         });
 
         for (int taille=0;taille<listTimeByStep.size();taille++)
         {
-            StringTimeByPlayer.add(taille+"-"+listTimeByStep.get(taille).getSecond()+" - "+listTimeByStep.get(taille).getFirst()/1000+":"+listTimeByStep.get(taille).getFirst()%1000);
+            StringTimeByPlayer.add(taille+1+"-"+listTimeByStep.get(taille).getSecond()+" - "+listTimeByStep.get(taille).getFirst()/1000+":"+listTimeByStep.get(taille).getFirst()%1000);
         }
 
         return StringTimeByPlayer;
@@ -325,14 +325,14 @@ public class Results extends AppCompatActivity {
 
         Collections.sort(listTimeByStep, new Comparator<Pair>() {
             @Override
-            public int compare(Pair p2, Pair p1) {
+            public int compare(Pair p1, Pair p2) {
                 return p1.first.compareTo(p2.first);
             }
         });
 
         for (int taille=0;taille<listTimeByStep.size();taille++)
         {
-            StringTimeByPlayer.add(taille+"-"+listTimeByStep.get(taille).getSecond()+" - "+listTimeByStep.get(taille).getFirst()/1000+":"+listTimeByStep.get(taille).getFirst()%1000);
+            StringTimeByPlayer.add(taille+1+"-"+listTimeByStep.get(taille).getSecond()+" - "+listTimeByStep.get(taille).getFirst()/1000+":"+listTimeByStep.get(taille).getFirst()%1000);
         }
 
         return StringTimeByPlayer;
@@ -364,14 +364,14 @@ public class Results extends AppCompatActivity {
 
         Collections.sort(listTimeByTeam, new Comparator<Pair>() {
             @Override
-            public int compare(Pair p2, Pair p1) {
+            public int compare(Pair p1, Pair p2) {
                 return p1.first.compareTo(p2.first);
             }
         });
 
         for (int taille=0;taille<listTimeByTeam.size();taille++)
         {
-            StringTimeByStep.add(taille+"-"+listTimeByTeam.get(taille).getSecond()+" - "+listTimeByTeam.get(taille).getFirst()/1000+":"+listTimeByTeam.get(taille).getFirst()%1000);
+            StringTimeByStep.add(taille+1+"-"+listTimeByTeam.get(taille).getSecond()+" - "+listTimeByTeam.get(taille).getFirst()/1000+":"+listTimeByTeam.get(taille).getFirst()%1000);
         }
 
 
@@ -401,14 +401,14 @@ public class Results extends AppCompatActivity {
 
         Collections.sort(listTimeByStepByTeam, new Comparator<Pair>() {
             @Override
-            public int compare(Pair p2, Pair p1) {
+            public int compare(Pair p1, Pair p2) {
                 return p1.first.compareTo(p2.first);
             }
         });
 
         for (int taille=0;taille<listTimeByStepByTeam.size();taille++)
         {
-            StringTimeByStep.add(taille+"-"+listTimeByStepByTeam.get(taille).getSecond()+" - "+listTimeByStepByTeam.get(taille).getFirst()/1000+":"+listTimeByStepByTeam.get(taille).getFirst()%1000);
+            StringTimeByStep.add(taille+1+"-"+listTimeByStepByTeam.get(taille).getSecond()+" - "+listTimeByStepByTeam.get(taille).getFirst()/1000+":"+listTimeByStepByTeam.get(taille).getFirst()%1000);
         }
 
 
@@ -439,14 +439,14 @@ public class Results extends AppCompatActivity {
 
         Collections.sort(listTimeByStep, new Comparator<Pair>() {
             @Override
-            public int compare(Pair p2, Pair p1) {
+            public int compare(Pair p1, Pair p2) {
                 return p1.first.compareTo(p2.first);
             }
         });
 
         for (int taille=0;taille<listTimeByStep.size();taille++)
         {
-            StringTimeByStep.add(taille+"-"+listTimeByStep.get(taille).getSecond()+" - "+listTimeByStep.get(taille).getFirst()/1000+":"+listTimeByStep.get(taille).getFirst()%1000);
+            StringTimeByStep.add(taille+1+"-"+listTimeByStep.get(taille).getSecond()+" - "+listTimeByStep.get(taille).getFirst()/1000+":"+listTimeByStep.get(taille).getFirst()%1000);
 
         }
 

@@ -180,14 +180,24 @@ public class PlayerScreen extends AppCompatActivity {
         else {
             //toRemove
             teams.addPlayer("joueur1", "firstName1", 1);
-            teams.addPlayer("jjoueur12", "firstName2", 1);
-            teams.addPlayer("jjoueur13", "firstName3", 1);
-            teams.addPlayer("jjoueur14", "firstName4", 1);
-            teams.addPlayer("jjoueur15", "firstName18", 1);
-            teams.addPlayer("j6joueur1", "firstName6", 1);
-            teams.addPlayer("jjoueur17", "firstName7", 1);
-            teams.addPlayer("j8joueur1", "firstName8", 1);
-            teams.addPlayer("jjoueur19", "firstName9", 1);
+            teams.addPlayer("jjoueur12", "firstName2", 2);
+            teams.addPlayer("jjoueur13", "firstName3", 3);
+            teams.addPlayer("jjoueur14", "firstName4", 4);
+            teams.addPlayer("jjoueur15", "firstName18", 5);
+            teams.addPlayer("j6joueur1", "firstName6", 6);
+            teams.addPlayer("jjoueur17", "firstName7", 7);
+            teams.addPlayer("j8joueur1", "firstName8", 8);
+            teams.addPlayer("jjoueur19", "firstName9", 9);
+
+            teams.addPlayer("joueur1", "firstName1", 9);
+            teams.addPlayer("jjoueur12", "firstName2", 2);
+            teams.addPlayer("jjoueur13", "firstName3", 3);
+            teams.addPlayer("jjoueur14", "firstName4", 4);
+            teams.addPlayer("jjoueur15", "firstName18", 5);
+            teams.addPlayer("j6joueur1", "firstName6", 6);
+            teams.addPlayer("jjoueur17", "firstName7", 7);
+            teams.addPlayer("j8joueur1", "firstName8", 8);
+            teams.addPlayer("jjoueur19", "firstName9", 9);
 
 
 

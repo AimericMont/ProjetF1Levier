@@ -1,5 +1,7 @@
 package com.example.projetf1levier;
 
+import android.util.Log;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -70,6 +72,16 @@ public class teamList implements Serializable {
 
     public void makeTeam()
     {
+
+        double sum =0;
+        for (int i=0;i<m_listOfPlayer.size();i++)
+        {
+            sum=sum+m_listOfPlayer.get(i).getLevel();
+        }
+        double moy=sum/m_listOfPlayer.size();
+
+        Log.d("myTag", "moy="+moy);
+        Log.d("myTag", "sum="+sum);
         int nbPlayer=getNbPlayer();
         int nbTeam= (nbPlayer%3 == 0) ? nbPlayer/3 : nbPlayer/3 +1;
 
@@ -80,15 +92,20 @@ public class teamList implements Serializable {
             m_listOfTeam.add(new team(i+1));
         }
 
-        int team =0,i=-1;
+        int team =0,i=1,j=i;
 
         for(int p=0;p<nbPlayer;p++)
         {
             m_listOfTeam.get(team).addPlayer(m_listOfPlayer.get(p));
-            team++;
-            if(team==nbTeam)
+            team=team+i;
+            if(i==0)
             {
-                team=0;
+                i=-j;
+                j=i;
+            }
+            else if(team==nbTeam-1 || team==0)
+            {
+                i=0;
             }
         }
     }
