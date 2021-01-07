@@ -190,16 +190,6 @@ public class PlayerSreen extends AppCompatActivity {
             teams.addPlayer("j9", "firstName9", 1);
 
 
-                alertDialogBuilder
-                        .setMessage("Attention, veuillez ajouter un nom et un prénom au joueur")
-                        .setCancelable(false)
-                        .setPositiveButton("ok",new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog,int id) {
-                                dialog.cancel();
-                            }
-                        });
-
-
             teams.makeTeam();
 
             Intent intent = new Intent(this, teamView.class);

@@ -125,14 +125,14 @@ public class Results extends AppCompatActivity {
 
         Collections.sort(listTimeByStep, new Comparator<Pair>() {
             @Override
-            public int compare(Pair p1, Pair p2) {
+            public int compare(Pair p2, Pair p1) {
                 return p1.first.compareTo(p2.first);
             }
         });
 
         for (int taille=0;taille<listTimeByStep.size();taille++)
         {
-            StringTimeByStep.add(listTimeByStep.get(taille).getSecond()+listTimeByStep.get(taille).getFirst());
+            StringTimeByStep.add(listTimeByStep.get(taille).getSecond()+listTimeByStep.get(taille).getFirst()/1000);
         }
 
 
