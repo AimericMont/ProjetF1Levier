@@ -122,6 +122,9 @@ public class PlayerSreen extends AppCompatActivity {
                             }
                         });
 
+                TextView playerText = (TextView) findViewById(R.id.player_text);
+                if (teams.getNbPlayer()>1)
+                    playerText.setText("players");
 
 
                 AlertDialog alertDialog = alertDialogBuilder.create();
@@ -187,6 +190,14 @@ public class PlayerSreen extends AppCompatActivity {
             teams.addPlayer("j9", "firstName9", 1);
 
 
+                alertDialogBuilder
+                        .setMessage("Attention, veuillez ajouter un nom et un prénom au joueur")
+                        .setCancelable(false)
+                        .setPositiveButton("ok",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                dialog.cancel();
+                            }
+                        });
 
 
             teams.makeTeam();
