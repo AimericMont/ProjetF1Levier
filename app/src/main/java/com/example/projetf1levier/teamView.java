@@ -44,7 +44,7 @@ public class teamView extends AppCompatActivity {
 
     public void runClick(View view) {
 
-        Intent intent = new Intent(this, Run2.class);
+        Intent intent = new Intent(this, Run.class);
 
         intent.putExtra("teamList", teams);
 

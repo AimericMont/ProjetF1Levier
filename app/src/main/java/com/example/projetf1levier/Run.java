@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Run2 extends AppCompatActivity {
+public class Run extends AppCompatActivity {
 
     RunAdapter m_runAdapter;
     Context c=this;

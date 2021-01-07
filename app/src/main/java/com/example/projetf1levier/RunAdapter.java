@@ -23,9 +23,9 @@ public class RunAdapter extends BaseAdapter {
     long startTime=0L,timeInMilliSeconds=0L,timeSwapBuff=0L;
 
 
-    Run2 m_context;
+    Run m_context;
 
-    public RunAdapter(Run2 context, teamList teams)
+    public RunAdapter(Run context, teamList teams)
     {
         runStart=false;
         m_context=context;
@@ -120,8 +120,6 @@ public class RunAdapter extends BaseAdapter {
 
     public void start()
     {
-
-
         runStart=true;
         startTime=SystemClock.uptimeMillis();
 
