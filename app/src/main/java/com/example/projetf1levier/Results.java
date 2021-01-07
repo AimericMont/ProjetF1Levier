@@ -57,24 +57,28 @@ public class Results extends AppCompatActivity {
         }
         else
         {
-            String affichageResult=null;
+            ArrayList<String> affichageResult=null;
+            listItems.clear();
             switch (spinnerStep.getSelectedItemPosition()){
                 case 0 : //all course
 
                     break;
                 case 1 : //sprint1
-
+                    affichageResult=getTimeBystep(0);
                     break;
                 case 2 : //obstacle1
-
+                    affichageResult=getTimeBystep(1);
                     break;
                 case 3 : //ravitaillement
+                    affichageResult=getTimeBystep(2);
 
                     break;
                 case 4 : //sprint2
+                    affichageResult=getTimeBystep(3);
 
                     break;
                 case 5 : //obstacle2
+                    affichageResult=getTimeBystep(4);
 
                     break;
                 case 6 : //tour1 (s1+o1)
@@ -84,8 +88,11 @@ public class Results extends AppCompatActivity {
 
                     break;
             }
+            for (int i=0;i<affichageResult.size();i++)
+            {
+                listItems.add(affichageResult.get(i));
+            }
 
-            listItems.add(affichageResult);
             adapter.notifyDataSetChanged();
         }
 

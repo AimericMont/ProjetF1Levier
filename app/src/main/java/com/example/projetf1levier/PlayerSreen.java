@@ -190,6 +190,8 @@ public class PlayerSreen extends AppCompatActivity {
             teams.addPlayer("j9", "firstName9", 1);
 
 
+
+
             teams.makeTeam();
 
             Intent intent = new Intent(this, teamView.class);
