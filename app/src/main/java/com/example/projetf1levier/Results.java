@@ -36,7 +36,7 @@ public class Results extends AppCompatActivity {
 
     }
 
-
+    //bite
     public void biteclick(View v)
     {
         ArrayList<String> a=getTimeBystep(1);
