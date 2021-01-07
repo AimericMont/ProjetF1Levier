@@ -103,7 +103,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button"
@@ -113,19 +114,20 @@
         android:onClick="endAddPlayer"
         android:text="terminer La saisie"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ajouter_but_id"
         app:layout_constraintTop_toBottomOf="@+id/ajouter_but_id" />
 
     <TextView
         android:id="@+id/nbPlayer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
         android:text="0"
         android:textSize="36sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/title_id"
         app:layout_constraintTop_toBottomOf="@+id/title_id" />
 
     <ImageButton
@@ -140,5 +142,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/t_l_chargement" />
+
+    <TextView
+        android:id="@+id/player_text"
+        android:layout_width="111dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="player"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nbPlayer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nbPlayer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
