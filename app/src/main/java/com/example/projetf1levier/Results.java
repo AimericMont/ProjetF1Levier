@@ -42,9 +42,47 @@ public class Results extends AppCompatActivity {
 
     public void validateclic(View view)
     {
-        if ()
+        Spinner spinnerEntity=(Spinner) findViewById(R.id.spinner2);
+        Spinner spinnerStep=(Spinner) findViewById(R.id.spinner4);
+        if (spinnerEntity.getSelectedItemPosition()==0)
+        {
+            listItems.add("Team:     Temps:");
+            adapter.notifyDataSetChanged();
+        }
+        else
+        {
+            String affichageResult=null;
+            switch (spinnerStep.getSelectedItemPosition()){
+                case 0 : //all course
 
-        listItems.add("Nom:     Prenom:     Temps:");
-        adapter.notifyDataSetChanged();
+                    break;
+                case 1 : //sprint1
+
+                    break;
+                case 2 : //obstacle1
+
+                    break;
+                case 3 : //ravitaillement
+
+                    break;
+                case 4 : //sprint2
+
+                    break;
+                case 5 : //obstacle2
+
+                    break;
+                case 6 : //tour1 (s1+o1)
+
+                    break;
+                case 7 : //tour1 (s2+o2)
+
+                    break;
+            }
+
+            listItems.add(affichageResult);
+            adapter.notifyDataSetChanged();
+        }
+
+
     }
 }
