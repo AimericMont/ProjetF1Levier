@@ -17,6 +17,18 @@ public class teamList implements Serializable {
         return m_listOfTeam.get(team).getChronoPlayer((player+1)*3+step);
     }
 
+    public long getTotaltimeForplayer(int team, int player)
+    {
+        long time=0L;
+        time+=m_listOfTeam.get(team).getChronoPlayer((player)*5+0);
+        time+=m_listOfTeam.get(team).getChronoPlayer((player)*5+1);
+        time+=m_listOfTeam.get(team).getChronoPlayer((player)*5+2);
+        time+=m_listOfTeam.get(team).getChronoPlayer((player)*5+3);
+        time+=m_listOfTeam.get(team).getChronoPlayer((player)*5+4);
+
+        return time;
+    }
+
 
     public teamList(PlayerSreen screen)
     {

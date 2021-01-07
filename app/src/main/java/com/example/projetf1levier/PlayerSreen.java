@@ -179,15 +179,15 @@ public class PlayerSreen extends AppCompatActivity {
         }
         else {
             //toRemove
-            teams.addPlayer("j1", "firstName1", 1);
-            teams.addPlayer("j2", "firstName2", 1);
-            teams.addPlayer("j3", "firstName3", 1);
-            teams.addPlayer("j4", "firstName4", 1);
-            teams.addPlayer("j5", "firstName18", 1);
-            teams.addPlayer("j6", "firstName6", 1);
-            teams.addPlayer("j7", "firstName7", 1);
-            teams.addPlayer("j8", "firstName8", 1);
-            teams.addPlayer("j9", "firstName9", 1);
+            teams.addPlayer("joueur1", "firstName1", 1);
+            teams.addPlayer("jjoueur12", "firstName2", 1);
+            teams.addPlayer("jjoueur13", "firstName3", 1);
+            teams.addPlayer("jjoueur14", "firstName4", 1);
+            teams.addPlayer("jjoueur15", "firstName18", 1);
+            teams.addPlayer("j6joueur1", "firstName6", 1);
+            teams.addPlayer("jjoueur17", "firstName7", 1);
+            teams.addPlayer("j8joueur1", "firstName8", 1);
+            teams.addPlayer("jjoueur19", "firstName9", 1);
 
 
 
