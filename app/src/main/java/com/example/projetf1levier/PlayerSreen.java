@@ -133,10 +133,10 @@ public class PlayerSreen extends AppCompatActivity {
         {
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
 
-            alertDialogBuilder.setTitle("Error in add player");
+            alertDialogBuilder.setTitle("Erreur sur l'ajout d'un joueur");
 
             alertDialogBuilder
-                    .setMessage("Le nombre d'eleve doit etre un multiple de 3")
+                    .setMessage("Le nombre de joueur doit etre un multiple de 3")
                     .setCancelable(false)
                     .setPositiveButton("ok",new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog,int id) {
