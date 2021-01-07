@@ -179,27 +179,30 @@ public class PlayerScreen extends AppCompatActivity {
         }
         else {
             //toRemove
-            teams.addPlayer("joueur1", "firstName1", 1);
-            teams.addPlayer("jjoueur12", "firstName2", 2);
-            teams.addPlayer("jjoueur13", "firstName3", 3);
-            teams.addPlayer("jjoueur14", "firstName4", 4);
-            teams.addPlayer("jjoueur15", "firstName18", 5);
-            teams.addPlayer("j6joueur1", "firstName6", 6);
-            teams.addPlayer("jjoueur17", "firstName7", 7);
-            teams.addPlayer("j8joueur1", "firstName8", 8);
-            teams.addPlayer("jjoueur19", "firstName9", 9);
+            teams.addPlayer("eur1", "firstName1", 1);
+            teams.addPlayer("jjur12", "firstName2", 2);
+            teams.addPlayer("jjur13", "firstName3", 3);
+            teams.addPlayer("jjor14", "firstName4", 4);
+            teams.addPlayer("jjur15", "firstName18", 5);
+            teams.addPlayer("j6eur1", "firstName6", 1);
+            teams.addPlayer("jjor17", "firstName7", 7);
+            teams.addPlayer("j8eur1", "firstName8", 3);
+            teams.addPlayer("jjor19", "firstName9", 9);
 
-            teams.addPlayer("joueur1", "firstName1", 9);
-            teams.addPlayer("jjoueur12", "firstName2", 2);
-            teams.addPlayer("jjoueur13", "firstName3", 3);
-            teams.addPlayer("jjoueur14", "firstName4", 4);
-            teams.addPlayer("jjoueur15", "firstName18", 5);
-            teams.addPlayer("j6joueur1", "firstName6", 6);
-            teams.addPlayer("jjoueur17", "firstName7", 7);
-            teams.addPlayer("j8joueur1", "firstName8", 8);
-            teams.addPlayer("jjoueur19", "firstName9", 9);
+            teams.addPlayer("jor1", "firstName1", 9);
+            teams.addPlayer("jeur12", "firstName2", 9);
+            teams.addPlayer("jeur13", "firstName3", 4);
+            teams.addPlayer("jjur14", "firstName4", 4);
+            teams.addPlayer("jj15", "firstName18", 1);
+            teams.addPlayer("jueur1", "firstName6", 6);
+            teams.addPlayer("jjur17", "firstName7", 9);
+            teams.addPlayer("jueur1", "firstName8", 8);
+            teams.addPlayer("jeur19", "firstName9", 9);
 
 
+            teams.addPlayer("ueur17", "firstName7", 9);
+            teams.addPlayer("j8eur1", "firstName8", 8);
+            teams.addPlayer("jeur19", "firstName9", 9);
 
 
             teams.makeTeam();
