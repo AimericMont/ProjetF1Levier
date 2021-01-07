@@ -1,21 +1,12 @@
 package com.example.projetf1levier;
 
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Spinner;
-import android.widget.ViewAnimator;
-
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class Results extends AppCompatActivity {
-    ArrayList<String> listItems=new ArrayList<String>();
-    ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +23,7 @@ public class Results extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter2=ArrayAdapter.createFromResource(this,R.array.stepValues, android.R.layout.simple_spinner_item);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner2.setAdapter(adapter2);
+
 
 
         ListView listView = (ListView)findViewById(R.id.results_view);
