@@ -27,6 +27,7 @@
         android:layout_margin="10dp"
         android:layout_marginEnd="208dp"
         android:layout_marginRight="208dp"
+        android:clickable="true"
         android:numColumns="3"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"

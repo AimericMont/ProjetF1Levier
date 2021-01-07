@@ -78,6 +78,18 @@ public class team implements Serializable {
         m_pastChrono=t;
     }
 
+    public void changeOrder(int first, int second)
+    {
+        if(first<=second)
+        {
+            second++;
+        }
+        ArrayList<player> newPlayerList=new ArrayList<player>();
+        newPlayerList.add(m_playerList.get(first));
+        newPlayerList.add(m_playerList.get(second));
+        newPlayerList.add(m_playerList.get(3-(first+second)));
+        m_playerList=newPlayerList;
+    }
 
     /*
     *getter
