@@ -18,7 +18,7 @@ public class teamList implements Serializable {
     }
 
 
-    public teamList(PlayerSreen screen)
+    public teamList(PlayerScreen screen)
     {
         m_listOfTeam= new ArrayList<team>();
         m_listOfPlayer= new ArrayList<player> (30);

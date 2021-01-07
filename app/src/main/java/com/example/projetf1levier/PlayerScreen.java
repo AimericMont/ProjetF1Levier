@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class PlayerSreen extends AppCompatActivity {
+public class PlayerScreen extends AppCompatActivity {
 
     private teamList teams=new teamList(this);
 
@@ -30,7 +30,7 @@ public class PlayerSreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_player_sreen);
+        setContentView(R.layout.activity_player_screen);
 
         ListView listView = (ListView)findViewById(R.id.playerlistView);
         adapter = new ArrayAdapter<String>(this,

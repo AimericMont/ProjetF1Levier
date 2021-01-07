@@ -23,9 +23,9 @@ public class RunAdapter extends BaseAdapter {
     long startTime=0L,timeInMilliSeconds=0L,timeSwapBuff=0L;
 
 
-    run2 m_context;
+    Run2 m_context;
 
-    public RunAdapter(run2 context,teamList teams)
+    public RunAdapter(Run2 context, teamList teams)
     {
         runStart=false;
         m_context=context;

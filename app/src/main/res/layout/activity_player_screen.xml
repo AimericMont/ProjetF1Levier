@@ -96,9 +96,9 @@
 
     <ListView
         android:id="@+id/playerlistView"
-        android:layout_width="808dp"
-        android:layout_height="611dp"
-        android:layout_marginTop="227dp"
+        android:layout_width="814dp"
+        android:layout_height="632dp"
+        android:layout_marginTop="200dp"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
