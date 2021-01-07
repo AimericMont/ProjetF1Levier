@@ -75,14 +75,15 @@ public class PlayerSreen extends AppCompatActivity {
 
     public void addClick(View view) {
 
+
         if (teams.getNbPlayer()==30)
         {
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
 
-            alertDialogBuilder.setTitle("Error in add player");
+            alertDialogBuilder.setTitle("Erreur d'ajout");
 
             alertDialogBuilder
-                    .setMessage("You can't add more than 30 student")
+                    .setMessage("Il existe deja 30 players")
                     .setCancelable(false)
                     .setPositiveButton("ok",new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog,int id) {
@@ -105,23 +106,47 @@ public class PlayerSreen extends AppCompatActivity {
             editText = (EditText) findViewById(R.id.editTextTextPersonName2);
             String firstName = editText.getText().toString();
 
+            if (name.trim().length()==0 || firstName.trim().length()==0)
+            {
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
 
-            Spinner spinner = (Spinner) findViewById(R.id.spinner);
-            int level = Integer.parseInt(spinner.getSelectedItem().toString());
+                alertDialogBuilder.setTitle("Erreur d'ajout");
 
-            teams.addPlayer(name, firstName, level);
+                alertDialogBuilder
+                        .setMessage("Attention, veuillez ajouter un nom et un prénom au joueur")
+                        .setCancelable(false)
+                        .setPositiveButton("ok",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                dialog.cancel();
+                            }
+                        });
 
-            TextView nbPlayer = (TextView) findViewById(R.id.nbPlayer);
-            nbPlayer.setText(String.valueOf(teams.getNbPlayer()));
 
+                AlertDialog alertDialog = alertDialogBuilder.create();
 
-            listItems.add(String.format("%s %s   lvl :%d", name, firstName, level));
-            adapter.notifyDataSetChanged();
+                //show it
+                alertDialog.show();
+            }
+            else
+            {
+                Spinner spinner = (Spinner) findViewById(R.id.spinner);
+                int level = Integer.parseInt(spinner.getSelectedItem().toString());
 
-            ListView mListView = (ListView) findViewById(R.id.playerlistView);
+                teams.addPlayer(name, firstName, level);
 
+                TextView nbPlayer = (TextView) findViewById(R.id.nbPlayer);
+                nbPlayer.setText(String.valueOf(teams.getNbPlayer()));
+
+                TextView playerText = (TextView) findViewById(R.id.player_text);
+                if (teams.getNbPlayer()>1)
+                    playerText.setText("players");
+
+                listItems.add(String.format("%s %s   lvl :%d", name, firstName, level));
+                adapter.notifyDataSetChanged();
+
+                ListView mListView = (ListView) findViewById(R.id.playerlistView);
+            }
         }
-
     }
 
     public void endAddPlayer(View view) {
