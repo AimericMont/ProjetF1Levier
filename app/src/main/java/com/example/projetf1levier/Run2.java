@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class run2 extends AppCompatActivity {
+public class Run2 extends AppCompatActivity {
 
     RunAdapter m_runAdapter;
     Context c=this;
@@ -60,28 +60,12 @@ public class run2 extends AppCompatActivity {
         gridView.setAdapter(m_runAdapter);
 
         btnStart=(Button)findViewById(R.id.start_but);
-        btnLap=(Button)findViewById(R.id.results_but);
         txtTimer=(TextView)findViewById(R.id.timerValue2);
-
-
-
     }
 
     public void start(View view)
     {
-
-
         m_runAdapter.start();
-
-
-    }
-
-    public void nextClick(View v) {
-
-    }
-
-    public void runClick(View view) {
-
     }
 
     public void resultClick(View view) {
