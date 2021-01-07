@@ -106,6 +106,9 @@ public class PlayerSreen extends AppCompatActivity {
             String firstName = editText.getText().toString();
 
 
+
+
+
             Spinner spinner = (Spinner) findViewById(R.id.spinner);
             int level = Integer.parseInt(spinner.getSelectedItem().toString());
 
@@ -126,7 +129,7 @@ public class PlayerSreen extends AppCompatActivity {
 
     public void endAddPlayer(View view) {
 
-        if (teams.getNbPlayer()%3!=0 || teams.getNbPlayer()==0 )
+        if (teams.getNbPlayer()%3!=0 || teams.getNbPlayer()==-1 )
         {
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
 
@@ -159,25 +162,8 @@ public class PlayerSreen extends AppCompatActivity {
             teams.addPlayer("j8", "firstName8", 1);
             teams.addPlayer("j9", "firstName9", 1);
 
-            teams.addPlayer("j1", "firstName1", 1);
-            teams.addPlayer("j2", "firstName2", 1);
-            teams.addPlayer("j3", "firstName3", 1);
-            teams.addPlayer("j4", "firstName4", 1);
-            teams.addPlayer("j5", "firstName5", 1);
-            teams.addPlayer("j6", "firstName6", 1);
-            teams.addPlayer("j7", "firstName7", 1);
-            teams.addPlayer("j8", "firstName8", 1);
-            teams.addPlayer("j9", "firstName9", 1);
 
-            teams.addPlayer("j1", "firstName1", 1);
-            teams.addPlayer("j2", "firstName2", 1);
-            teams.addPlayer("j3", "firstName3", 1);
-            teams.addPlayer("j4", "firstName4", 1);
-            teams.addPlayer("j5", "firstName5", 1);
-            teams.addPlayer("j6", "firstName6", 1);
-            teams.addPlayer("j7", "firstName7", 1);
-            teams.addPlayer("j8", "firstName8", 1);
-            teams.addPlayer("j9", "firstName9", 1);
+
 
             teams.makeTeam();
 

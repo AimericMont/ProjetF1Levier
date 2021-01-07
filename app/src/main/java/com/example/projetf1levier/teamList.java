@@ -12,6 +12,12 @@ public class teamList implements Serializable {
     int[] m_imageStep={R.drawable.sprint1,R.drawable.obstacle1,R.drawable.ravitaillement,R.drawable.sprint2,R.drawable.obstacle2};
 
 
+    public long getTimeForPlayer(int team,int player,int step)
+    {
+        return m_listOfTeam.get(team).getChronoPlayer((player+1)*3+step);
+    }
+
+
     public teamList(PlayerSreen screen)
     {
         m_listOfTeam= new ArrayList<team>();
