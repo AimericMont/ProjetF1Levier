@@ -11,8 +11,6 @@ public class TeamAdapter extends BaseAdapter {
     teamList m_teams;
 
     LayoutInflater inflter;
-
-
     private Context m_context;
 
     public TeamAdapter(Context context, teamList teams) {

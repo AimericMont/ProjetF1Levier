@@ -21,7 +21,6 @@ public class player implements Comparable , Serializable {
         m_name=_name;
         m_firstName=_firstName;
         m_level=_level;
-
     }
 
     /*
@@ -33,13 +32,10 @@ public class player implements Comparable , Serializable {
     public String getName() {
         return m_name;
     }
-
-
     public String getFullName()
     {
         return getName() + " - " + getFirstName() +" - " +m_level;
     }
-
     public String getFirstName() {
         return m_firstName;
     }

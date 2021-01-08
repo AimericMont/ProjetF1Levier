@@ -28,7 +28,6 @@ public class teamView extends AppCompatActivity {
 
         GridView gridView = (GridView) findViewById(R.id.teamGridView);
 
-
         teamAdapter = new TeamAdapter(this, teams);
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

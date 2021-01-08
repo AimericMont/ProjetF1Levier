@@ -73,12 +73,10 @@ public class RunAdapter extends BaseAdapter {
         ImageView numPlayerTeam = (ImageView) convertView.findViewById(R.id.num_player_team);
         ImageView stepTeam = (ImageView) convertView.findViewById(R.id.step_team);
 
-
         numPlayerTeam.setImageResource(m_teams.getImageNum(currentTeam.getNumberPlayerRun()));
         stepTeam.setImageResource(m_teams.getImageStep(currentTeam.getNumberStepRun()));
 
         titlteTeam.setText("Equipe " + currentTeam.getTeamNumber());
-
 
         Button nextStep = (Button) convertView.findViewById(R.id.but_team);
 
@@ -115,7 +113,6 @@ public class RunAdapter extends BaseAdapter {
 
         customeHandler.postDelayed(updateTimerThread, 0);
         m_context.getButtonStart().setVisibility(View.INVISIBLE);
-
 
         //init timeStart for all tieam
         for (int i = 0; i < m_teams.getListOfTeam().size(); i++) {

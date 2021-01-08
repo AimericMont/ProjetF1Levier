@@ -54,7 +54,6 @@ public class PlayerScreen extends AppCompatActivity {
                     }
 
                 });
-
             }
         });
 
@@ -85,8 +84,6 @@ public class PlayerScreen extends AppCompatActivity {
                             dialog.cancel();
                         }
                     });
-
-
             AlertDialog alertDialog = alertDialogBuilder.create();
 
             //show it
@@ -105,7 +102,6 @@ public class PlayerScreen extends AppCompatActivity {
 
                 alertDialogBuilder.setTitle("Erreur d'ajout");
 
-
                 alertDialogBuilder
                         .setMessage("Attention, veuillez ajouter un nom et un prénom au joueur")
                         .setCancelable(false)
@@ -118,8 +114,6 @@ public class PlayerScreen extends AppCompatActivity {
                 TextView playerText = (TextView) findViewById(R.id.player_text);
                 if (teams.getNbPlayer() > 1)
                     playerText.setText("players");
-
-
                 AlertDialog alertDialog = alertDialogBuilder.create();
 
                 //show it
@@ -151,7 +145,6 @@ public class PlayerScreen extends AppCompatActivity {
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
 
             alertDialogBuilder.setTitle("Erreur sur l'ajout d'un joueur");
-
             alertDialogBuilder
                     .setMessage("Le nombre de joueur doit etre un multiple de 3")
                     .setCancelable(false)
@@ -161,7 +154,6 @@ public class PlayerScreen extends AppCompatActivity {
                         }
                     });
 
-
             AlertDialog alertDialog = alertDialogBuilder.create();
 
             //show it
@@ -169,15 +161,10 @@ public class PlayerScreen extends AppCompatActivity {
         } else {
             //toRemove
 
-
             teams.makeTeam();
-
             Intent intent = new Intent(this, teamView.class);
-
             intent.putExtra("teamList", teams);
-
             startActivity(intent);
         }
-
     }
 }

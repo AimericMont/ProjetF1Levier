@@ -55,12 +55,10 @@ public class team implements Serializable {
         }
     }
 
-
     public void addChrono(long _chrono) {
         m_chronoPlayer.add(_chrono - m_pastChrono);
         m_pastChrono = _chrono;
     }
-
 
     public long getChronoPlayer(int _step) {
         return m_chronoPlayer.get(_step);
@@ -84,8 +82,6 @@ public class team implements Serializable {
     /*
      *getter
      */
-
-
     public Boolean getFinishRun() {
         return finishRun;
     }
@@ -104,10 +100,6 @@ public class team implements Serializable {
 
     public int getNumberStepRun() {
         return m_numberStepRun;
-    }
-
-    public long getChronoTeam() {
-        return m_chronoTeam;
     }
 
 }

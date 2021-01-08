@@ -1,6 +1,5 @@
 package com.example.projetf1levier;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -15,8 +14,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Run extends AppCompatActivity {
 
     RunAdapter m_runAdapter;
-    Context c = this;
-    //private teamList teams;
     teamList teams;
 
     long pastChrono;
@@ -28,7 +25,6 @@ public class Run extends AppCompatActivity {
     TextView txtTimer;
     Handler customeHandler = new Handler();
     long startTime = 0L, timeInMilliSeconds = 0L, timeSwapBuff = 0L;
-
 
     Runnable updateTimerThread = new Runnable() {
         @Override
