@@ -24,17 +24,17 @@ public class teamView extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        teams = (teamList)intent.getSerializableExtra("teamList");
+        teams = (teamList) intent.getSerializableExtra("teamList");
 
-        GridView gridView = (GridView)findViewById(R.id.teamGridView);
+        GridView gridView = (GridView) findViewById(R.id.teamGridView);
 
 
-        teamAdapter = new TeamAdapter(this,teams);
+        teamAdapter = new TeamAdapter(this, teams);
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                teamOrder(parent,v,position,id);
+                teamOrder(parent, v, position, id);
             }
         });
 
@@ -53,14 +53,14 @@ public class teamView extends AppCompatActivity {
 
     public void teamOrder(AdapterView<?> parent, View v, final int position, long id) {
 
-        final int[] order={1,2,3};
+        final int[] order = {1, 2, 3};
 
-        team currentTeam=teams.getListOfTeam().get(position);
+        team currentTeam = teams.getListOfTeam().get(position);
 
 
-        String[] players={currentTeam.getPlayerList().get(0).getFullName()
-                ,currentTeam.getPlayerList().get(1).getFullName()
-                ,currentTeam.getPlayerList().get(2).getFullName()};
+        String[] players = {currentTeam.getPlayerList().get(0).getFullName()
+                , currentTeam.getPlayerList().get(1).getFullName()
+                , currentTeam.getPlayerList().get(2).getFullName()};
 
 
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
@@ -69,7 +69,7 @@ public class teamView extends AppCompatActivity {
         alertDialogBuilder.setTitle("Choix du premier joueur")
                 .setItems(players, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        teamOrder2(position,which);
+                        teamOrder2(position, which);
                     }
                 });
 
@@ -80,31 +80,27 @@ public class teamView extends AppCompatActivity {
         alertDialog.show();
 
 
-
     }
 
     public void teamOrder2(final int team, final int first) {
-        String[] players2=new String[2];
+        String[] players2 = new String[2];
 
-        final team currentTeam=teams.getListOfTeam().get(team);
+        final team currentTeam = teams.getListOfTeam().get(team);
 
-        for (int p=0,j=0;p<3;p++)
-        {
-            if (p!=first)
-            {
-                players2[j++]=currentTeam.getPlayerList().get(p).getFullName();
+        for (int p = 0, j = 0; p < 3; p++) {
+            if (p != first) {
+                players2[j++] = currentTeam.getPlayerList().get(p).getFullName();
             }
         }
 
         AlertDialog.Builder alertDialogBuilder2 = new AlertDialog.Builder(this);
 
 
-
         alertDialogBuilder2.setTitle("Choix du deuxieme joueur")
                 .setItems(players2, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
 
-                        currentTeam.changeOrder(first,which);
+                        currentTeam.changeOrder(first, which);
                         teamAdapter.notifyDataSetChanged();
 
                     }
@@ -116,8 +112,6 @@ public class teamView extends AppCompatActivity {
         //show it
         alertDialog2.show();
     }
-
-
 
 
 }

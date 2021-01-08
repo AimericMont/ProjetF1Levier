@@ -15,11 +15,10 @@ public class TeamAdapter extends BaseAdapter {
 
     private Context m_context;
 
-    public TeamAdapter(Context context,teamList teams)
-    {
-        m_context=context;
+    public TeamAdapter(Context context, teamList teams) {
+        m_context = context;
         inflter = (LayoutInflater.from(context));
-        m_teams=teams;
+        m_teams = teams;
     }
 
     @Override
@@ -42,11 +41,11 @@ public class TeamAdapter extends BaseAdapter {
 
         convertView = inflter.inflate(R.layout.grid_view_team, null); // inflate the layout
         //convertView = LayoutInflater.from(m_context).inflate(R.layout.activity_team_view, parent, false);;
-        team t=m_teams.getListOfTeam().get(position);
+        team t = m_teams.getListOfTeam().get(position);
 
-        player p1=t.getPlayerList().get(0);
-        player p2=t.getPlayerList().get(1);
-        player p3=t.getPlayerList().get(2);
+        player p1 = t.getPlayerList().get(0);
+        player p2 = t.getPlayerList().get(1);
+        player p3 = t.getPlayerList().get(2);
 
         TextView nameP1 = (TextView) convertView.findViewById(R.id.nameP1);
         TextView nameP2 = (TextView) convertView.findViewById(R.id.nameP2);

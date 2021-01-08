@@ -11,10 +11,6 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Run"></activity>
         <activity android:name=".Results" />
-        <activity
-            android:name=".activity_gridView"
-            android:label="@string/title_activity_grid_view"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".teamView" />
         <activity android:name=".PlayerScreen" />
         <activity android:name=".MainActivity">

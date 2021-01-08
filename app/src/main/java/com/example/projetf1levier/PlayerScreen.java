@@ -19,20 +19,17 @@ import java.util.ArrayList;
 
 public class PlayerScreen extends AppCompatActivity {
 
-    private teamList teams=new teamList(this);
-
     int m_itemSelected;
-
-    ArrayList<String> listItems=new ArrayList<String>();
-
+    ArrayList<String> listItems = new ArrayList<String>();
     ArrayAdapter<String> adapter;
+    private teamList teams = new teamList(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player_screen);
 
-        ListView listView = (ListView)findViewById(R.id.playerlistView);
+        ListView listView = (ListView) findViewById(R.id.playerlistView);
         adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, listItems);
         listView.setAdapter(adapter);
@@ -44,7 +41,7 @@ public class PlayerScreen extends AppCompatActivity {
                                     int position,
                                     long id) {
 
-                m_itemSelected=position;
+                m_itemSelected = position;
 
                 ImageButton deleteIcon = (ImageButton) findViewById(R.id.deleteIcon);
                 deleteIcon.setVisibility(view.VISIBLE);
@@ -63,8 +60,7 @@ public class PlayerScreen extends AppCompatActivity {
 
     }
 
-    public void deletePlayer()
-    {
+    public void deletePlayer() {
         teams.removeplayer(m_itemSelected);
         listItems.remove(m_itemSelected);
         adapter.notifyDataSetChanged();
@@ -76,8 +72,7 @@ public class PlayerScreen extends AppCompatActivity {
     public void addClick(View view) {
 
 
-        if (teams.getNbPlayer()==30)
-        {
+        if (teams.getNbPlayer() == 30) {
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
 
             alertDialogBuilder.setTitle("Erreur d'ajout");
@@ -85,8 +80,8 @@ public class PlayerScreen extends AppCompatActivity {
             alertDialogBuilder
                     .setMessage("Il existe deja 30 players")
                     .setCancelable(false)
-                    .setPositiveButton("ok",new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog,int id) {
+                    .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
                             dialog.cancel();
                         }
                     });
@@ -96,8 +91,7 @@ public class PlayerScreen extends AppCompatActivity {
 
             //show it
             alertDialog.show();
-        }
-        else {
+        } else {
 
 
             EditText editText = (EditText) findViewById(R.id.editTextTextPersonName);
@@ -106,8 +100,7 @@ public class PlayerScreen extends AppCompatActivity {
             editText = (EditText) findViewById(R.id.editTextTextPersonName2);
             String firstName = editText.getText().toString();
 
-            if (name.trim().length()==0 || firstName.trim().length()==0)
-            {
+            if (name.trim().length() == 0 || firstName.trim().length() == 0) {
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
 
                 alertDialogBuilder.setTitle("Erreur d'ajout");
@@ -116,14 +109,14 @@ public class PlayerScreen extends AppCompatActivity {
                 alertDialogBuilder
                         .setMessage("Attention, veuillez ajouter un nom et un prénom au joueur")
                         .setCancelable(false)
-                        .setPositiveButton("ok",new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog,int id) {
+                        .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
                                 dialog.cancel();
                             }
                         });
 
                 TextView playerText = (TextView) findViewById(R.id.player_text);
-                if (teams.getNbPlayer()>1)
+                if (teams.getNbPlayer() > 1)
                     playerText.setText("players");
 
 
@@ -131,9 +124,7 @@ public class PlayerScreen extends AppCompatActivity {
 
                 //show it
                 alertDialog.show();
-            }
-            else
-            {
+            } else {
                 Spinner spinner = (Spinner) findViewById(R.id.spinner);
                 int level = Integer.parseInt(spinner.getSelectedItem().toString());
 
@@ -143,7 +134,7 @@ public class PlayerScreen extends AppCompatActivity {
                 nbPlayer.setText(String.valueOf(teams.getNbPlayer()));
 
                 TextView playerText = (TextView) findViewById(R.id.player_text);
-                if (teams.getNbPlayer()>1)
+                if (teams.getNbPlayer() > 1)
                     playerText.setText("players");
 
                 listItems.add(String.format("%s %s   lvl :%d", name, firstName, level));
@@ -156,8 +147,7 @@ public class PlayerScreen extends AppCompatActivity {
 
     public void endAddPlayer(View view) {
 
-        if (teams.getNbPlayer()%3!=0 || teams.getNbPlayer()==0 )
-        {
+        if (teams.getNbPlayer() % 3 != 0 || teams.getNbPlayer() == 0) {
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
 
             alertDialogBuilder.setTitle("Erreur sur l'ajout d'un joueur");
@@ -165,8 +155,8 @@ public class PlayerScreen extends AppCompatActivity {
             alertDialogBuilder
                     .setMessage("Le nombre de joueur doit etre un multiple de 3")
                     .setCancelable(false)
-                    .setPositiveButton("ok",new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog,int id) {
+                    .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
                             dialog.cancel();
                         }
                     });
@@ -176,10 +166,8 @@ public class PlayerScreen extends AppCompatActivity {
 
             //show it
             alertDialog.show();
-        }
-        else {
+        } else {
             //toRemove
-
 
 
             teams.makeTeam();
