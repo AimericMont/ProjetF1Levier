@@ -156,7 +156,7 @@ public class PlayerScreen extends AppCompatActivity {
 
     public void endAddPlayer(View view) {
 
-        if (teams.getNbPlayer()%3!=0 || teams.getNbPlayer()==-1 )
+        if (teams.getNbPlayer()%3!=0 || teams.getNbPlayer()==0 )
         {
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
 
